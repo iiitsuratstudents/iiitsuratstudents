@@ -21,22 +21,41 @@ const lenses = {
   }
 };
 
+const RSS_FEEDS = {
+  geopolitics: [
+    { name: 'BBC World', url: 'https://feeds.bbci.co.uk/news/world/rss.xml' },
+    { name: 'The Guardian World', url: 'https://www.theguardian.com/world/rss' },
+    { name: 'Al Jazeera', url: 'https://www.aljazeera.com/xml/rss/all.xml' }
+  ],
+  science: [
+    { name: 'BBC Science', url: 'https://feeds.bbci.co.uk/news/science_and_environment/rss.xml' },
+    { name: 'ScienceDaily', url: 'https://www.sciencedaily.com/rss/top/science.xml' },
+    { name: 'The Guardian Science', url: 'https://www.theguardian.com/science/rss' },
+    { name: 'Nature', url: 'https://www.nature.com/nature.rss' }
+  ],
+  economy: [
+    { name: 'BBC Business', url: 'https://feeds.bbci.co.uk/news/business/rss.xml' },
+    { name: 'The Guardian Business', url: 'https://www.theguardian.com/business/rss' },
+    { name: 'Al Jazeera', url: 'https://www.aljazeera.com/xml/rss/all.xml' }
+  ]
+};
+
 const result = {
   generatedAt: new Date().toISOString(),
   provider: LLM_PROVIDER === 'ollama' ? `Local Ollama / ${OLLAMA_MODEL}` : `Gemini / ${GEMINI_MODEL}`,
-  retrieval: 'GDELT DOC 2.0',
+  retrieval: 'Direct publisher RSS feeds',
   topics: {}
 };
 
 for (const [topic, cfg] of Object.entries(lenses)) {
   console.log(`Building ${cfg.label} brief...`);
-  const sources = await fetchGdelt(cfg.query);
+  const sources = await fetchPublisherFeeds(topic);
   if (!sources.length) throw new Error(`No sources returned for ${topic}`);
   const brief = await summarize(topic, cfg.label, sources);
   result.topics[topic] = {
     ...brief,
     kicker: brief.kicker || `${cfg.label} · global brief`,
-    mode: 'GitHub Action · Gemini',
+    mode: LLM_PROVIDER === 'ollama' ? 'GitHub Action · local Qwen' : 'GitHub Action · Gemini',
     updatedAt: result.generatedAt,
     stories: (brief.stories || []).slice(0, 3).map(story => ({
       title: clean(story.title, 180),
@@ -54,157 +73,111 @@ await fs.mkdir(new URL('../data/', import.meta.url), { recursive: true });
 await fs.writeFile(OUT, JSON.stringify(result, null, 2) + '\n');
 console.log(`Updated ${OUT.pathname}`);
 
-async function fetchGdelt(query) {
-  const u = new URL('https://api.gdeltproject.org/api/v2/doc/doc');
-  u.searchParams.set('query', query);
-  u.searchParams.set('mode', 'ArtList');
-  u.searchParams.set('maxrecords', '40');
-  u.searchParams.set('format', 'json');
-  u.searchParams.set('sort', 'HybridRel');
-  u.searchParams.set('timespan', '24h');
 
-  try {
-    const data = await fetchJsonWithRetry(u.toString(), {
-      headers: { 'User-Agent': 'SETU-IIIT-Surat/1.0 (+https://iiitsuratstudents.github.io/iiitsuratstudents/)' }
-    }, 4);
+async function fetchPublisherFeeds(topic) {
+  const feeds = RSS_FEEDS[topic] || [];
+  const settled = await Promise.allSettled(feeds.map(feed => fetchOneFeed(feed)));
 
-    const seenTitles = new Set();
-    const domainCount = new Map();
-    const items = (data.articles || [])
-      .filter(a => a?.url && a?.title)
-      .filter(a => {
-        const title = normalize(a.title);
-        if (!title || seenTitles.has(title)) return false;
-        const domain = (a.domain || safeDomain(a.url) || 'unknown').toLowerCase();
-        const count = domainCount.get(domain) || 0;
-        if (count >= 2) return false;
-        seenTitles.add(title);
-        domainCount.set(domain, count + 1);
-        return true;
-      })
-      .slice(0, 18)
-      .map(a => ({
-        title: clean(a.title, 300),
-        url: a.url,
-        domain: a.domain || safeDomain(a.url),
-        seenDate: a.seendate || '',
-        language: a.language || '',
-        sourceCountry: a.sourcecountry || ''
-      }));
-
-    if (items.length >= 6) return items;
-    console.warn(`GDELT returned only ${items.length} usable items; using RSS fallback.`);
-  } catch (err) {
-    console.warn(`GDELT unavailable after retries: ${err.message}. Using RSS fallback.`);
-  }
-
-  return fetchGoogleNewsFallback(query);
-}
-
-async function fetchJsonWithRetry(url, options = {}, attempts = 4) {
-  let lastError;
-  for (let i = 1; i <= attempts; i++) {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 25000);
-    try {
-      const r = await fetch(url, { ...options, signal: controller.signal });
-      if (!r.ok) throw new Error(`HTTP ${r.status}: ${(await r.text()).slice(0, 200)}`);
-      return await r.json();
-    } catch (err) {
-      lastError = err;
-      console.warn(`Fetch attempt ${i}/${attempts} failed: ${err.message}`);
-      if (i < attempts) await sleep(1500 * i);
-    } finally {
-      clearTimeout(timeout);
+  const all = [];
+  for (let i = 0; i < settled.length; i++) {
+    const result = settled[i];
+    const feed = feeds[i];
+    if (result.status === 'fulfilled') {
+      console.log(`${feed.name}: ${result.value.length} items`);
+      all.push(...result.value);
+    } else {
+      console.warn(`${feed.name} unavailable: ${result.reason?.message || result.reason}`);
     }
   }
-  throw lastError || new Error('Request failed after retries');
-}
 
-async function fetchGoogleNewsFallback(query) {
-  const rssQuery = query
-    .replace(/[()"]/g, ' ')
-    .replace(/\s+OR\s+/gi, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-
-  const u = new URL('https://news.google.com/rss/search');
-  u.searchParams.set('q', `${rssQuery} when:1d`);
-  u.searchParams.set('hl', 'en-US');
-  u.searchParams.set('gl', 'US');
-  u.searchParams.set('ceid', 'US:en');
-
-  const xml = await fetchTextWithRetry(u.toString(), {
-    headers: { 'User-Agent': 'Mozilla/5.0 SETU-IIIT-Surat/1.0' }
-  }, 3);
-
-  const items = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map(m => m[1]);
-  const out = [];
   const seen = new Set();
   const sourceCounts = new Map();
+  const cutoff = Date.now() - 72 * 60 * 60 * 1000;
 
-  for (const item of items) {
-    const titleRaw = xmlValue(item, 'title');
-    const linkRaw = xmlValue(item, 'link');
-    const pubDate = xmlValue(item, 'pubDate');
-    const sourceMatch = item.match(/<source(?:\s+url="([^"]*)")?>([\s\S]*?)<\/source>/i);
-    const sourceName = decodeXml(stripCdata(sourceMatch?.[2] || 'Google News'));
-    const sourceUrl = decodeXml(sourceMatch?.[1] || '');
-    const title = decodeXml(stripCdata(titleRaw));
-    const url = decodeXml(stripCdata(linkRaw));
+  const deduped = all
+    .filter(item => {
+      if (!item.title || !item.url) return false;
+      const key = normalize(item.title);
+      if (!key || seen.has(key)) return false;
+      const count = sourceCounts.get(item.domain) || 0;
+      if (count >= 6) return false;
+      seen.add(key);
+      sourceCounts.set(item.domain, count + 1);
+      return true;
+    })
+    .sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
 
-    if (!title || !url) continue;
-    const key = normalize(title);
-    if (!key || seen.has(key)) continue;
-    const domain = safeDomain(sourceUrl) || sourceName || 'Google News';
-    const count = sourceCounts.get(domain) || 0;
-    if (count >= 2) continue;
+  const recent = deduped.filter(x => !x.timestamp || x.timestamp >= cutoff);
+  const selected = (recent.length >= 10 ? recent : deduped).slice(0, 20);
 
-    seen.add(key);
-    sourceCounts.set(domain, count + 1);
-    out.push({
+  if (selected.length < 6) {
+    throw new Error(`Only ${selected.length} usable publisher-feed items were available for ${topic}.`);
+  }
+  return selected;
+}
+
+async function fetchOneFeed(feed) {
+  const xml = await fetchTextWithRetry(feed.url, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (compatible; SETU-IIIT-Surat/1.0; +https://iiitsuratstudents.github.io/iiitsuratstudents/)',
+      'Accept': 'application/rss+xml, application/xml, text/xml, */*'
+    }
+  }, 3);
+
+  const items = [...xml.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/gi)].map(m => m[1]);
+  if (!items.length) throw new Error('Feed contained no RSS <item> entries.');
+
+  return items.slice(0, 20).map(item => {
+    const title = decodeXml(stripCdata(xmlValue(item, 'title')));
+    const link = decodeXml(stripCdata(xmlValue(item, 'link') || xmlValue(item, 'guid')));
+    const pubDate = decodeXml(stripCdata(
+      xmlValue(item, 'pubDate') ||
+      xmlValue(item, 'dc:date') ||
+      xmlValue(item, 'date')
+    ));
+    const t = Date.parse(pubDate);
+
+    return {
       title: clean(title, 300),
-      url,
-      domain: clean(domain, 120),
+      url: link,
+      domain: feed.name,
       seenDate: pubDate,
+      timestamp: Number.isFinite(t) ? t : 0,
       language: 'English',
       sourceCountry: ''
-    });
-    if (out.length >= 18) break;
-  }
-
-  if (out.length < 3) throw new Error(`RSS fallback returned only ${out.length} usable items.`);
-  console.log(`Using Google News RSS fallback with ${out.length} source items.`);
-  return out;
+    };
+  }).filter(x => x.title && /^https?:\/\//i.test(x.url));
 }
 
 async function fetchTextWithRetry(url, options = {}, attempts = 3) {
   let lastError;
   for (let i = 1; i <= attempts; i++) {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 25000);
+    const timeout = setTimeout(() => controller.abort(), 20000);
     try {
-      const r = await fetch(url, { ...options, signal: controller.signal });
-      if (!r.ok) throw new Error(`HTTP ${r.status}: ${(await r.text()).slice(0, 200)}`);
+      const r = await fetch(url, { ...options, signal: controller.signal, redirect: 'follow' });
+      if (!r.ok) throw new Error(`HTTP ${r.status}: ${(await r.text()).slice(0, 160)}`);
       return await r.text();
     } catch (err) {
       lastError = err;
-      console.warn(`RSS fetch attempt ${i}/${attempts} failed: ${err.message}`);
+      console.warn(`Feed fetch attempt ${i}/${attempts} for ${url} failed: ${err.message}`);
       if (i < attempts) await sleep(1200 * i);
     } finally {
       clearTimeout(timeout);
     }
   }
-  throw lastError || new Error('RSS request failed after retries');
+  throw lastError || new Error('Feed request failed after retries');
 }
 
 function xmlValue(item, tag) {
-  const m = item.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, 'i'));
+  const m = item.match(new RegExp('<' + tag + '[^>]*>([\\s\\S]*?)<\\/' + tag + '>', 'i'));
   return m?.[1] || '';
 }
-function stripCdata(s='') { return s.replace(/^<!\[CDATA\[/, '').replace(/\]\]>$/, ''); }
+function stripCdata(s='') { return s.replace(/^<!\[CDATA\[/, '').replace(/\]\]>$/, '').trim(); }
 function decodeXml(s='') {
   return s
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
     .replace(/&amp;/g, '&')
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
