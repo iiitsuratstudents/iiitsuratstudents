@@ -22,7 +22,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-24.04
-    timeout-minutes: 12
+    timeout-minutes: 25
 
     steps:
       - name: Check out repository
@@ -34,10 +34,35 @@ jobs:
           node-version: "24"
           package-manager-cache: false
 
+      - name: Cache local LLM
+        uses: actions/cache@v6
+        with:
+          path: ~/.ollama/models
+          key: ollama-qwen3-1.7b-v1
+
+      - name: Start local Qwen model
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$HOME/.ollama"
+          docker pull ollama/ollama:latest
+          docker run -d             --name setu-ollama             -v "$HOME/.ollama:/root/.ollama"             -p 11434:11434             ollama/ollama:latest
+
+          for i in {1..30}; do
+            if curl -fsS http://127.0.0.1:11434/api/tags >/dev/null; then
+              break
+            fi
+            sleep 2
+          done
+
+          curl -fsS http://127.0.0.1:11434/api/tags >/dev/null
+          docker exec setu-ollama ollama pull qwen3:1.7b
+          echo "Local model ready."
+
       - name: Generate current WorldLens briefs
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: gemini-3.1-flash-lite
+          LLM_PROVIDER: ollama
+          OLLAMA_MODEL: qwen3:1.7b
         run: node scripts/update-worldlens.mjs
 
       - name: Commit refreshed brief
