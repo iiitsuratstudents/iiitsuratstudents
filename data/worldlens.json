@@ -1,0 +1,85 @@
+{
+  "generatedAt": null,
+  "provider": "Waiting for first GitHub Action run",
+  "retrieval": "GDELT DOC 2.0",
+  "topics": {
+    "geopolitics": {
+      "kicker": "Geopolitics · setup ready",
+      "summary": "The GitHub-native WorldLens pipeline is installed. Add the GEMINI_API_KEY repository secret and run the Update WorldLens workflow once to replace this setup message with a current AI-generated brief.",
+      "mode": "AI pipeline ready",
+      "updatedAt": null,
+      "stories": [
+        {
+          "title": "GitHub Action installed",
+          "body": "WorldLens will retrieve current global reporting through GDELT and ask Gemini to compress the source metadata into three neutral, source-linked stories.",
+          "whyItMatters": "The API key stays in GitHub Actions rather than browser JavaScript.",
+          "sources": []
+        },
+        {
+          "title": "Scheduled refreshes are configured",
+          "body": "After activation, the workflow runs every four hours and writes the latest brief to the repository.",
+          "whyItMatters": "Students see a compact current brief without needing an individual LLM account.",
+          "sources": []
+        },
+        {
+          "title": "Source links remain part of the product",
+          "body": "The generator maps each AI-written story back to the retrieved source URLs used to construct it.",
+          "whyItMatters": "Readers can inspect primary reporting instead of treating the model output as authority.",
+          "sources": []
+        }
+      ]
+    },
+    "science": {
+      "kicker": "Academic & scientific · setup ready",
+      "summary": "The automated science lens is ready to activate from GitHub Actions.",
+      "mode": "AI pipeline ready",
+      "updatedAt": null,
+      "stories": [
+        {
+          "title": "Research-aware summarisation",
+          "body": "The prompt is designed to distinguish research findings, institutional announcements and broader interpretation whenever the retrieved metadata supports that distinction.",
+          "whyItMatters": "Scientific news is most useful when evidence and claims are not collapsed together.",
+          "sources": []
+        },
+        {
+          "title": "Global retrieval first",
+          "body": "Current article metadata is gathered before Gemini is called, rather than asking the model to recall recent events from memory.",
+          "whyItMatters": "Retrieval reduces stale-news and fabrication risk.",
+          "sources": []
+        },
+        {
+          "title": "Three stories, not an endless feed",
+          "body": "WorldLens deliberately limits each lens to three developments so that the product encourages context rather than doomscrolling.",
+          "whyItMatters": "The design goal is informed attention, not engagement maximisation.",
+          "sources": []
+        }
+      ]
+    },
+    "economy": {
+      "kicker": "Economic · setup ready",
+      "summary": "The economic lens is ready to be generated automatically by the GitHub workflow.",
+      "mode": "AI pipeline ready",
+      "updatedAt": null,
+      "stories": [
+        {
+          "title": "Indicators before interpretation",
+          "body": "The summarisation prompt asks the model to avoid inventing numbers and to keep forecasts or claims attributed when the source metadata supports them.",
+          "whyItMatters": "Economic reporting often mixes measured indicators with expectations.",
+          "sources": []
+        },
+        {
+          "title": "Broad economic coverage",
+          "body": "Retrieval queries include inflation, trade, labour, central banks, industry, markets and growth rather than treating market prices as the whole economy.",
+          "whyItMatters": "Students get a wider picture of economic developments.",
+          "sources": []
+        },
+        {
+          "title": "Automatic GitHub refresh",
+          "body": "Once the Gemini secret is present, a scheduled Action updates the repository file six times per day.",
+          "whyItMatters": "The live site can consume fresh summaries without hosting a separate backend.",
+          "sources": []
+        }
+      ]
+    }
+  }
+}
