@@ -1,85 +1,150 @@
 {
-  "generatedAt": null,
-  "provider": "Waiting for first GitHub Action run",
-  "retrieval": "GDELT DOC 2.0",
+  "generatedAt": "2026-09-22T16:47:12.678Z",
+  "provider": "Local Ollama / qwen3:1.7b",
+  "retrieval": "Direct publisher RSS feeds",
   "topics": {
     "geopolitics": {
-      "kicker": "Geopolitics · setup ready",
-      "summary": "The GitHub-native WorldLens pipeline is installed. Add the GEMINI_API_KEY repository secret and run the Update WorldLens workflow once to replace this setup message with a current AI-generated brief.",
-      "mode": "AI pipeline ready",
-      "updatedAt": null,
+      "kicker": "Geopolitics",
+      "summary": "Today's lens covers geopolitical developments, including Trump's remarks, UN discussions, and regional conflicts, while highlighting the impact of global events on students.",
       "stories": [
         {
-          "title": "GitHub Action installed",
-          "body": "WorldLens will retrieve current global reporting through GDELT and ask Gemini to compress the source metadata into three neutral, source-linked stories.",
-          "whyItMatters": "The API key stays in GitHub Actions rather than browser JavaScript.",
-          "sources": []
+          "title": "Trump's Geopolitical Remarks",
+          "body": "Trump claimed 'my honour to settle eight wars' including 'war in Gaza' in a statement, highlighting his rhetoric on international conflicts. The statement reflects his broader strategy of asserting control over global disputes, which has been a recurring theme in his public persona.",
+          "whyItMatters": "Trump's statements underscore the tension between national sovereignty and international conflict resolution, raising questions about the role of leaders in shaping global narratives.",
+          "sources": [
+            {
+              "name": "Al Jazeera",
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/22/trump-my-honour-to-settle-eight-wars-including-war-in-gaza?traffic_source=rss"
+            },
+            {
+              "name": "Al Jazeera",
+              "url": "https://www.aljazeera.com/news/2026/9/22/trump-tv-can-the-us-president-bypass-mainstream-media?traffic_source=rss"
+            }
+          ]
         },
         {
-          "title": "Scheduled refreshes are configured",
-          "body": "After activation, the workflow runs every four hours and writes the latest brief to the repository.",
-          "whyItMatters": "Students see a compact current brief without needing an individual LLM account.",
-          "sources": []
+          "title": "UN and Geopolitical Tensions",
+          "body": "The UN is under pressure to address ongoing conflicts, with discussions on whether it can prevent wars. This reflects the global struggle for peace and the role of international institutions in mediating conflicts.",
+          "whyItMatters": "The UN's ability to intervene in conflicts is critical for maintaining global stability, highlighting the importance of international cooperation in addressing geopolitical challenges.",
+          "sources": [
+            {
+              "name": "Al Jazeera",
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/22/unga-2026-can-the-un-stop-wars?traffic_source=rss"
+            }
+          ]
         },
         {
-          "title": "Source links remain part of the product",
-          "body": "The generator maps each AI-written story back to the retrieved source URLs used to construct it.",
-          "whyItMatters": "Readers can inspect primary reporting instead of treating the model output as authority.",
-          "sources": []
+          "title": "Regional Conflicts and Security Concerns",
+          "body": "Lithuania faces threats from Russia, prompting evacuation plans, while Sri Lanka faces criminal charges over bombings. These events illustrate the complex interplay of security concerns and geopolitical tensions in the region.",
+          "whyItMatters": "Regional security dynamics and geopolitical threats highlight the need for proactive measures to prevent conflicts and ensure regional stability.",
+          "sources": [
+            {
+              "name": "BBC World",
+              "url": "https://www.bbc.co.uk/news/articles/ck5yw8npxzrlo?at_medium=RSS&at_campaign=rss"
+            },
+            {
+              "name": "BBC World",
+              "url": "https://www.bbc.co.uk/news/articles/cqy7z275yx65o?at_medium=RSS&at_campaign=rss"
+            }
+          ]
         }
-      ]
+      ],
+      "mode": "GitHub Action · local Qwen",
+      "updatedAt": "2026-09-22T16:47:12.678Z"
     },
     "science": {
-      "kicker": "Academic & scientific · setup ready",
-      "summary": "The automated science lens is ready to activate from GitHub Actions.",
-      "mode": "AI pipeline ready",
-      "updatedAt": null,
+      "kicker": "Science & Technology",
+      "summary": "Today's lens covers breakthroughs in quantum science, climate impacts, sustainable materials, and ecological research.",
       "stories": [
         {
-          "title": "Research-aware summarisation",
-          "body": "The prompt is designed to distinguish research findings, institutional announcements and broader interpretation whenever the retrieved metadata supports that distinction.",
-          "whyItMatters": "Scientific news is most useful when evidence and claims are not collapsed together.",
-          "sources": []
+          "title": "Quantum Sound Manipulation",
+          "body": "Scientists have achieved a breakthrough by observing sound waves transition between quantum states, marking a significant step in quantum physics research. This discovery could lead to advancements in quantum communication and computing.",
+          "whyItMatters": "This research may enable new technologies that harness quantum phenomena for more efficient information processing and secure communication.",
+          "sources": [
+            {
+              "name": "ScienceDaily",
+              "url": "https://www.sciencedaily.com/releases/2026/09/260921081054.htm"
+            },
+            {
+              "name": "ScienceDaily",
+              "url": "https://www.sciencedaily.com/releases/2026/09/260921081101.htm"
+            }
+          ]
         },
         {
-          "title": "Global retrieval first",
-          "body": "Current article metadata is gathered before Gemini is called, rather than asking the model to recall recent events from memory.",
-          "whyItMatters": "Retrieval reduces stale-news and fabrication risk.",
-          "sources": []
+          "title": "El Niño Intensifies Ahead of Expected Peak",
+          "body": "A developing El Niño event is expected to become the strongest on record, raising concerns about potential climate impacts in the coming months. This development underscores the increasing complexity of global weather patterns.",
+          "whyItMatters": "Understanding and predicting El Niño events is crucial for preparing for extreme weather and climate-related challenges.",
+          "sources": [
+            {
+              "name": "BBC Science",
+              "url": "https://www.bbc.co.uk/weather/articles/cmvgy4nv9d62o?at_medium=RSS&at_campaign=rss"
+            },
+            {
+              "name": "BBC Science",
+              "url": "https://www.bbc.co.uk/news/videos/ckq6312dq0qjo?at_medium=RSS&at_campaign=rss"
+            }
+          ]
         },
         {
-          "title": "Three stories, not an endless feed",
-          "body": "WorldLens deliberately limits each lens to three developments so that the product encourages context rather than doomscrolling.",
-          "whyItMatters": "The design goal is informed attention, not engagement maximisation.",
-          "sources": []
+          "title": "New Concrete Reduces Carbon Footprint",
+          "body": "A novel type of concrete has been developed that not only strengthens structures but also absorbs significant amounts of carbon dioxide from the atmosphere, offering a promising solution for reducing environmental impact.",
+          "whyItMatters": "This innovation could play a vital role in combating climate change by providing a sustainable alternative to traditional construction materials.",
+          "sources": [
+            {
+              "name": "ScienceDaily",
+              "url": "https://www.sciencedaily.com/releases/2026/09/260921081105.htm"
+            },
+            {
+              "name": "BBC Science",
+              "url": "https://www.bbc.co.uk/news/articles/c3vgyzkyr0r8o?at_medium=RSS&at_campaign=rss"
+            }
+          ]
         }
-      ]
+      ],
+      "mode": "GitHub Action · local Qwen",
+      "updatedAt": "2026-09-22T16:47:12.678Z"
     },
     "economy": {
-      "kicker": "Economic · setup ready",
-      "summary": "The economic lens is ready to be generated automatically by the GitHub workflow.",
-      "mode": "AI pipeline ready",
-      "updatedAt": null,
+      "kicker": "Economic",
+      "summary": "The lens covers key economic developments, including labor issues, government borrowing, trade dynamics, and corporate actions, highlighting the complex interplay of global economic factors.",
       "stories": [
         {
-          "title": "Indicators before interpretation",
-          "body": "The summarisation prompt asks the model to avoid inventing numbers and to keep forecasts or claims attributed when the source metadata supports them.",
-          "whyItMatters": "Economic reporting often mixes measured indicators with expectations.",
-          "sources": []
+          "title": "Doordash Admits Underpaying New York Workers",
+          "body": "Doordash has admitted to underpaying New York workers, citing a lack of transparency in its compensation policies. The admission comes amid growing concerns about labor rights and fair wages in the gig economy. This event highlights the challenges faced by workers in industries with flexible employment models.",
+          "whyItMatters": "The incident underscores the need for greater transparency and fair treatment in gig economy jobs, which are increasingly prevalent in today's workforce.",
+          "sources": [
+            {
+              "name": "BBC Business",
+              "url": "https://www.bbc.co.uk/news/articles/cjr4v72y6p4eo?at_medium=RSS&at_campaign=rss"
+            }
+          ]
         },
         {
-          "title": "Broad economic coverage",
-          "body": "Retrieval queries include inflation, trade, labour, central banks, industry, markets and growth rather than treating market prices as the whole economy.",
-          "whyItMatters": "Students get a wider picture of economic developments.",
-          "sources": []
+          "title": "UK Government Borrowing Surges as Fiscal Pressure Mounts",
+          "body": "The UK government experienced a significant increase in borrowing in August, adding to pre-Budget pressure on the chancellor. This development reflects the ongoing financial challenges faced by the UK's public sector, with rising costs and limited revenue sources contributing to the fiscal strain.",
+          "whyItMatters": "The surge in borrowing highlights the vulnerability of public finances and the need for sustainable fiscal policies to support long-term economic stability.",
+          "sources": [
+            {
+              "name": "BBC Business",
+              "url": "https://www.bbc.co.uk/news/articles/c68049m18435o?at_medium=RSS&at_campaign=rss"
+            }
+          ]
         },
         {
-          "title": "Automatic GitHub refresh",
-          "body": "Once the Gemini secret is present, a scheduled Action updates the repository file six times per day.",
-          "whyItMatters": "The live site can consume fresh summaries without hosting a separate backend.",
-          "sources": []
+          "title": "EU Imports Exceed Exports as Trade Deficit Widens",
+          "body": "The EU imports three times more than it exports, according to recent data, exacerbating the trade deficit. This situation raises concerns about the economic health of the bloc and the impact of trade imbalances on member states. The disparity highlights the complexities of global trade and the challenges of maintaining economic balance.",
+          "whyItMatters": "The widening trade deficit underscores the importance of addressing trade imbalances and fostering balanced economic relationships among EU member states.",
+          "sources": [
+            {
+              "name": "The Guardian Business",
+              "url": "https://www.theguardian.com/business/2026/sep/22/eu-imports-china-exports-trade-deficit-xi-jinping-donald-trump"
+            }
+          ]
         }
-      ]
+      ],
+      "mode": "GitHub Action · local Qwen",
+      "updatedAt": "2026-09-22T16:47:12.678Z"
     }
   }
 }
