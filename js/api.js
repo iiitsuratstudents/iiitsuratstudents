@@ -16,7 +16,7 @@ async function request(path, options = {}) {
   return res.json();
 }
 
-const WORLDLENS_FEED = 'https://raw.githubusercontent.com/iiitsuratstudents/iiitsuratstudents/main/data/worldlens.json';
+const WORLDLENS_FEED = './data/worldlens.json';
 
 export async function getBrief(topic, force = false) {
   if (API_BASE) {
