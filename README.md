@@ -34,6 +34,26 @@ Cloudflare Worker
 
 GitHub Pages is static hosting, so do **not** put a Gemini/OpenAI key in `js/config.js`. Anyone can inspect browser JavaScript. Keep keys or AI bindings in the Worker.
 
+## GitHub-only WorldLens (recommended for this Pages deployment)
+
+The live daily news brief does **not** need a separate backend. A scheduled GitHub Action in `.github/workflows/update-worldlens.yml`:
+
+1. Retrieves current article metadata from GDELT.
+2. Calls Gemini using the repository secret `GEMINI_API_KEY`.
+3. Writes `data/worldlens.json`.
+4. Commits that generated file back to `main`.
+5. The GitHub Pages frontend reads the latest JSON directly from `raw.githubusercontent.com`.
+
+The workflow runs every four hours and can also be run manually from **Actions → Update WorldLens → Run workflow**.
+
+To activate it, create a Gemini API key in Google AI Studio, then add it in **Repository Settings → Secrets and variables → Actions → New repository secret** with the exact name:
+
+```
+GEMINI_API_KEY
+```
+
+Do not put the key in `js/config.js`, HTML, JavaScript, a repository variable, or any committed file.
+
 ## 1. Run the frontend locally
 
 Because the app uses JavaScript modules, serve the directory instead of double-clicking `index.html`:
