@@ -2,6 +2,12 @@ name: Update WorldLens
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/update-worldlens.mjs"
+      - ".github/workflows/update-worldlens.yml"
   schedule:
     # Refresh six times per day, away from the top of the hour.
     - cron: "23 */4 * * *"
@@ -15,16 +21,18 @@ concurrency:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: "22"
+          node-version: "24"
+          package-manager-cache: false
 
       - name: Generate current WorldLens briefs
         env:
