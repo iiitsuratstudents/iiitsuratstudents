@@ -1,13 +1,10 @@
 import fs from 'node:fs/promises';
 
-const API_KEY = process.env.GEMINI_API_KEY;
-const MODEL = process.env.GEMINI_MODEL || 'gemini-3.1-flash-lite';
+const LLM_PROVIDER = process.env.LLM_PROVIDER || 'ollama';
+const OLLAMA_MODEL = process.env.OLLAMA_MODEL || 'qwen3:1.7b';
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY || '';
+const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-3.1-flash-lite';
 const OUT = new URL('../data/worldlens.json', import.meta.url);
-
-if (!API_KEY) {
-  console.error('GEMINI_API_KEY is missing. Add it in Settings → Secrets and variables → Actions.');
-  process.exit(2);
-}
 
 const lenses = {
   geopolitics: {
@@ -26,7 +23,7 @@ const lenses = {
 
 const result = {
   generatedAt: new Date().toISOString(),
-  provider: `Gemini / ${MODEL}`,
+  provider: LLM_PROVIDER === 'ollama' ? `Local Ollama / ${OLLAMA_MODEL}` : `Gemini / ${GEMINI_MODEL}`,
   retrieval: 'GDELT DOC 2.0',
   topics: {}
 };
@@ -243,7 +240,7 @@ Required JSON schema:
   "stories": [
     {
       "title": "short factual headline",
-      "body": "80-130 word explanation",
+      "body": "70-110 word explanation",
       "whyItMatters": "one concise sentence",
       "sourceIndexes": [0, 2]
     }
@@ -253,27 +250,55 @@ Required JSON schema:
 SOURCE METADATA:
 ${sourceText}`;
 
-  const r = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(MODEL)}:generateContent?key=${encodeURIComponent(API_KEY)}`,
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        systemInstruction: { parts: [{ text: system }] },
-        contents: [{ role: 'user', parts: [{ text: user }] }],
-        generationConfig: {
-          temperature: 0.2,
-          maxOutputTokens: 2200,
-          responseMimeType: 'application/json'
-        }
-      })
-    }
-  );
+  if (LLM_PROVIDER === 'gemini') {
+    if (!GEMINI_API_KEY) throw new Error('GEMINI_API_KEY is not configured.');
+    const r = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(GEMINI_MODEL)}:generateContent?key=${encodeURIComponent(GEMINI_API_KEY)}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          systemInstruction: { parts: [{ text: system }] },
+          contents: [{ role: 'user', parts: [{ text: user }] }],
+          generationConfig: {
+            temperature: 0.2,
+            maxOutputTokens: 2200,
+            responseMimeType: 'application/json'
+          }
+        })
+      }
+    );
+    if (!r.ok) throw new Error(`Gemini failed (${r.status}): ${await r.text()}`);
+    const data = await r.json();
+    const text = data.candidates?.[0]?.content?.parts?.map(p => p.text || '').join('')?.trim();
+    if (!text) throw new Error('Gemini returned no text.');
+    return parseJson(text);
+  }
 
-  if (!r.ok) throw new Error(`Gemini failed (${r.status}): ${await r.text()}`);
+  const r = await fetch('http://127.0.0.1:11434/api/chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      model: OLLAMA_MODEL,
+      messages: [
+        { role: 'system', content: system },
+        { role: 'user', content: user + '\n\n/no_think' }
+      ],
+      stream: false,
+      format: 'json',
+      think: false,
+      options: {
+        temperature: 0.2,
+        num_ctx: 16384,
+        num_predict: 1800
+      }
+    })
+  });
+
+  if (!r.ok) throw new Error(`Local Ollama failed (${r.status}): ${await r.text()}`);
   const data = await r.json();
-  const text = data.candidates?.[0]?.content?.parts?.map(p => p.text || '').join('')?.trim();
-  if (!text) throw new Error('Gemini returned no text.');
+  const text = data?.message?.content?.trim() || data?.response?.trim();
+  if (!text) throw new Error('Local Ollama returned no text.');
   return parseJson(text);
 }
 
