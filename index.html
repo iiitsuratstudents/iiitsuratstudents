@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#082419">
+<meta name="description" content="SETU — IIIT Surat student welfare, learning and campus life portal.">
+<title>SETU — IIIT Surat Student Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="orb o1"></div><div class="orb o2"></div>
+<div class="shell">
+<aside class="sidebar">
+<a class="brand" href="#home" data-route="home"><b>S</b><span><strong>SETU</strong><small>IIIT Surat</small></span></a>
+<nav>
+<button class="nav-item active" data-route="home">⌂ <span>Home</span></button>
+<button class="nav-item" data-route="world">◎ <span>WorldLens</span></button>
+<button class="nav-item" data-route="learn">✦ <span>LearnLab</span></button>
+<button class="nav-item" data-route="welfare">♡ <span>Welfare</span></button>
+<button class="nav-item" data-route="campus">◫ <span>Campus</span></button>
+</nav>
+<div class="side-help"><span class="eyebrow">Need support?</span><strong>You do not need the perfect words.</strong><p>Raise a concern or ask for a confidential conversation.</p><button class="btn soft" data-open="support">Open support</button></div>
+<div class="side-icons"><button id="themeToggle" class="icon-btn">☼</button><button id="commandButton" class="icon-btn">⌘</button></div>
+</aside>
+
+<main>
+<header class="topbar"><div><p class="eyebrow" id="todayLabel"></p><h1 id="pageTitle"></h1></div><div class="row"><button class="search" id="searchOpen">Search SETU <kbd>/</kbd></button><button class="btn primary" data-open="issue">Raise an issue</button></div></header>
+
+<section class="view active" data-view="home">
+<div class="hero-grid">
+<article class="card hero"><div><span class="status">● Student space</span><h2>Your campus,<br><em>less fragmented.</em></h2><p>One calm place for welfare, learning, opportunities, campus voice and a five-minute view of the world.</p><div class="row"><button class="btn primary" data-route="world">Read today’s brief</button><button class="btn ghost" data-route="learn">Open LearnLab</button></div></div><div class="hero-mark">S</div></article>
+<article class="card focus"><div class="head"><div><span class="eyebrow">Focus sprint</span><h3>25 quiet minutes</h3></div><span class="badge">local</span></div><div class="timer" id="timerDisplay">25:00</div><div class="progress"><span id="timerProgress"></span></div><div class="head"><button class="btn soft" id="timerStart">Start</button><button class="icon-btn" id="timerReset">↺</button></div></article>
+</div>
+<div class="section-title"><div><span class="eyebrow">Quick access</span><h2>What do you need right now?</h2></div></div>
+<div class="quick">
+<button data-open="issue"><i>!</i><strong>SpeakUp</strong><small>Raise an issue or submit anonymously.</small></button>
+<button data-open="counselling"><i>♡</i><strong>Sahaara</strong><small>Request a confidential conversation.</small></button>
+<button data-route="learn"><i>✦</i><strong>LearnLab</strong><small>Think, explain, question and practise.</small></button>
+<button data-route="world"><i>◎</i><strong>WorldLens</strong><small>Geopolitics, science and economy.</small></button>
+</div>
+<div class="split">
+<article class="card pad"><div class="head"><div><span class="eyebrow">WorldLens · daily</span><h3>Three lenses. No doomscrolling.</h3></div><button class="link" data-route="world">Open →</button></div>
+<div class="lens-tabs"><button class="active" data-preview-topic="geopolitics">Geopolitics</button><button data-preview-topic="science">Science</button><button data-preview-topic="economy">Economy</button></div><div id="homeBrief" class="softbox"></div></article>
+<article class="card pad"><div class="head"><div><span class="eyebrow">Daily spark</span><h3>One good question</h3></div><span id="streakBadge" class="badge">0 day streak</span></div><p><strong>A fair coin is tossed until the first head. Given that the process ended before the fourth toss, what is the probability it ended on the second toss?</strong></p><div id="challengeChoices" class="choices"><button data-answer="a">1/2</button><button data-answer="b">2/7</button><button data-answer="c">1/3</button><button data-answer="d">1/4</button></div><div id="challengeFeedback" class="feedback"></div></article>
+</div>
+<div class="section-title"><div><span class="eyebrow">Worth a look</span><h2>Campus signals</h2></div></div><div id="signalGrid" class="signal-grid"></div>
+</section>
+
+<section class="view" data-view="world">
+<div class="intro"><div><span class="eyebrow">WorldLens</span><h2>The world, compressed with context.</h2><p>A short source-linked global brief. AI summarizes retrieved reporting; original sources remain primary.</p></div><button class="btn soft" id="refreshBrief">Refresh brief</button></div>
+<div class="world-tabs"><button class="world-tab active" data-topic="geopolitics">Geopolitics</button><button class="world-tab" data-topic="science">Academic & scientific</button><button class="world-tab" data-topic="economy">Economic</button></div>
+<div class="world-layout"><article class="card pad"><div class="head meta"><span id="briefUpdated">Today</span><span id="briefMode" class="badge">demo preview</span></div><div id="worldBrief"></div></article><aside class="stack"><article class="card pad"><span class="eyebrow">How to read it</span><h3>Signal ≠ truth</h3><p>Preserve uncertainty, distinguish reporting from analysis, and follow the sources.</p></article><article class="card pad"><span class="eyebrow">Reflection</span><h3>Ask a better question</h3><p id="reflectionPrompt">Which development could look completely different from another country’s perspective?</p><button class="link" data-ai-tool="debate">Explore with Debate Lens →</button></article></aside></div>
+</section>
+
+<section class="view" data-view="learn">
+<div class="intro"><div><span class="eyebrow">LearnLab</span><h2>AI that makes you think, not copy.</h2><p>Tools built around explanation, questioning, critique and active recall.</p></div><span class="badge">AI-assisted</span></div>
+<div class="tools">
+<button data-ai-tool="socratic"><b>01</b><i>?</i><h3>Socratic Coach</h3><p>Work through a problem without being handed the answer too early.</p><span>Start thinking →</span></button>
+<button data-ai-tool="explain"><b>02</b><i>↕</i><h3>Depth Dial</h3><p>Explain a concept at first-year, advanced or research depth.</p><span>Choose depth →</span></button>
+<button data-ai-tool="paper"><b>03</b><i>¶</i><h3>Paper Decoder</h3><p>Unpack claims, methods, evidence, prerequisites and limitations.</p><span>Decode paper →</span></button>
+<button data-ai-tool="debate"><b>04</b><i>⇄</i><h3>Debate Lens</h3><p>Steelman distinct views without endorsing either side.</p><span>Open both sides →</span></button>
+<button data-ai-tool="map"><b>05</b><i>⌘</i><h3>Concept Mapper</h3><p>Build prerequisite chains, milestones and practice tasks.</p><span>Build map →</span></button>
+<button data-ai-tool="oral"><b>06</b><i>◌</i><h3>Viva Simulator</h3><p>Generate progressively deeper oral-exam questions.</p><span>Begin viva →</span></button>
+</div>
+<div class="split"><article class="card pad"><div class="head"><div><span class="eyebrow">Micro-learning</span><h3>Build a 7-day skill sprint</h3></div><span class="badge">AI</span></div><p>One small skill, seven focused sessions, one tangible output each day.</p><div class="inline"><input id="skillInput" placeholder="e.g. Git, GNNs, public speaking"><button class="btn primary" id="skillBuild">Build sprint</button></div><pre id="skillOutput" class="output"></pre></article><article class="card pad"><span class="eyebrow">Learning contract</span><h3>Use AI with friction.</h3><p>Ask it to question your reasoning, surface assumptions, show counterexamples and cite sources. Removing all struggle can remove the learning.</p></article></div>
+</section>
+
+<section class="view" data-view="welfare">
+<div class="intro"><div><span class="eyebrow">Welfare</span><h2>A quieter front door to support.</h2><p>Start with the least information necessary. Sensitive details belong only in approved institutional systems.</p></div><button class="btn primary" data-open="support">Get support</button></div>
+<div class="welfare">
+<article class="card pad"><i>!</i><span class="eyebrow">SpeakUp</span><h3>Raise a concern</h3><p>Academic, hostel, accessibility, infrastructure, safety or general student-life issues.</p><button class="link" data-open="issue">Create ticket →</button></article>
+<article class="card pad"><i>♡</i><span class="eyebrow">Sahaara</span><h3>Talk to someone</h3><p>Request a confidential conversation without explaining why.</p><button class="link" data-open="counselling">Request conversation →</button></article>
+<article class="card pad"><i>◉</i><span class="eyebrow">Accessibility</span><h3>Remove a barrier</h3><p>Report a digital, physical or learning-access barrier.</p><button class="link" data-open="issue" data-category="Accessibility">Report barrier →</button></article>
+</div>
+<article class="card emergency"><div><strong>Immediate danger or medical emergency?</strong><p>SETU is not an emergency-response service. Use designated institute contacts or India’s emergency number.</p></div><b>112</b></article>
+<div class="section-title"><div><span class="eyebrow">My activity</span><h2>Local ticket history</h2></div></div><div id="ticketHistory"></div>
+</section>
+
+<section class="view" data-view="campus">
+<div class="intro"><div><span class="eyebrow">Campus</span><h2>Things happening around you.</h2><p>Opportunities, peer learning, clubs, collaborations, utilities and low-stakes campus participation.</p></div><button class="btn soft" id="campusSuggest">Suggest something</button></div>
+<div id="campusGrid" class="campus-grid"></div>
+<div class="split"><article class="card pad"><div class="head"><div><span class="eyebrow">Campus pulse</span><h3>One-question poll</h3></div><span class="badge">local demo</span></div><p>Which recurring activity would add the most value this month?</p><div id="pollOptions" class="polls"></div></article><article class="card pad"><span class="eyebrow">Student-built</span><h3>Ship a campus micro-tool.</h3><p>Build tiny utilities that remove one real friction point.</p><button class="link" id="moduleIdea">Generate a micro-tool idea →</button><pre id="moduleIdeaOutput" class="output"></pre></article></div>
+</section>
+</main>
+</div>
+
+<nav class="mobile-nav"><button class="active" data-route="home">⌂<span>Home</span></button><button data-route="world">◎<span>World</span></button><button data-route="learn">✦<span>Learn</span></button><button data-route="welfare">♡<span>Welfare</span></button></nav>
+<div id="modalBackdrop" class="backdrop"></div>
+
+<section class="modal" id="issueModal" aria-hidden="true"><button class="close" data-close>×</button><span class="eyebrow">SpeakUp</span><h2>Raise an issue</h2><p>Describe the problem, not yourself.</p><form id="issueForm" class="form"><div class="fields"><label>Category<select name="category" id="issueCategory"><option>Infrastructure</option><option>Academic</option><option>Hostel</option><option>Accessibility</option><option>Safety</option><option>Student services</option><option>Other</option></select></label><label>Urgency<select name="urgency"><option>Normal</option><option>Important</option><option>Urgent</option></select></label></div><label>Short title<input name="title" maxlength="90" required placeholder="What needs attention?"></label><label>What happened?<textarea name="description" maxlength="1400" rows="5" required></textarea></label><label class="check"><input type="checkbox" name="anonymous" checked> Submit anonymously</label><small>Do not enter passwords, financial information, medical records or highly sensitive data.</small><button class="btn primary" type="submit">Submit issue</button></form><div id="issueSuccess" class="success" hidden></div></section>
+
+<section class="modal" id="counsellingModal" aria-hidden="true"><button class="close" data-close>×</button><span class="eyebrow">Sahaara</span><h2>Request a confidential conversation</h2><p>You may request contact without explaining what is going on.</p><form id="counsellingForm" class="form"><label>Preferred contact<input name="contact" required placeholder="Institute email or phone"></label><div class="fields"><label>Mode<select name="mode"><option>In person</option><option>Phone</option><option>Video call</option><option>No preference</option></select></label><label>Timing<select name="timing"><option>As soon as practical</option><option>Today</option><option>Within 2 days</option><option>This week</option></select></label></div><label>Optional note<textarea name="note" maxlength="500" rows="3"></textarea></label><label class="check"><input type="checkbox" required> I understand this is not an emergency service.</label><button class="btn primary" type="submit">Request contact</button></form><div id="counsellingSuccess" class="success" hidden></div></section>
+
+<section class="modal large" id="aiModal" aria-hidden="true"><button class="close" data-close>×</button><span class="eyebrow" id="aiEyebrow">LearnLab</span><h2 id="aiTitle">AI tool</h2><p id="aiDescription"></p><form id="aiForm" class="form"><label id="aiLevelWrap">Depth<select id="aiLevel"><option value="first-year">First-year undergraduate</option><option value="advanced">Advanced undergraduate</option><option value="research">Research level</option></select></label><label id="aiPromptLabel">Topic or text <textarea id="aiPrompt" rows="7" required></textarea></label><button class="btn primary" type="submit">Run tool</button></form><pre id="aiResult" class="output" hidden></pre></section>
+
+<section class="command" id="commandPalette" aria-hidden="true"><div class="command-box"><div class="command-input"><span>⌘</span><input id="commandInput" placeholder="Go anywhere or launch a tool…"><kbd>esc</kbd></div><div id="commandResults"></div></div></section>
+<div id="toast" class="toast"></div>
+<script type="module" src="./js/app.js"></script>
+</body></html>
