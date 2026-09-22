@@ -16,9 +16,29 @@ async function request(path, options = {}) {
   return res.json();
 }
 
+const WORLDLENS_FEED = 'https://raw.githubusercontent.com/iiitsuratstudents/iiitsuratstudents/main/data/worldlens.json';
+
 export async function getBrief(topic, force = false) {
-  if (!API_BASE) return { ...demoBriefs[topic], mode: 'demo preview', updatedAt: new Date().toISOString() };
-  return request(`/api/brief?topic=${encodeURIComponent(topic)}${force ? '&refresh=1' : ''}`);
+  if (API_BASE) {
+    return request(`/api/brief?topic=${encodeURIComponent(topic)}${force ? '&refresh=1' : ''}`);
+  }
+
+  try {
+    const feedUrl = `${WORLDLENS_FEED}?v=${force ? Date.now() : Math.floor(Date.now() / 60000)}`;
+    const res = await fetch(feedUrl, { cache: 'no-store' });
+    if (!res.ok) throw new Error(`WorldLens feed failed (${res.status})`);
+    const data = await res.json();
+    const brief = data?.topics?.[topic];
+    if (!brief) throw new Error('Requested WorldLens topic is missing.');
+    return {
+      ...brief,
+      mode: brief.mode || 'GitHub Action · Gemini',
+      updatedAt: brief.updatedAt || data.generatedAt || null
+    };
+  } catch (err) {
+    console.warn('Falling back to bundled WorldLens demo:', err);
+    return { ...demoBriefs[topic], mode: 'offline fallback', updatedAt: null };
+  }
 }
 
 export async function runAI(tool, prompt, level = '') {
