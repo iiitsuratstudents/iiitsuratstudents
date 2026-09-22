@@ -66,36 +66,155 @@ async function fetchGdelt(query) {
   u.searchParams.set('sort', 'HybridRel');
   u.searchParams.set('timespan', '24h');
 
-  const r = await fetch(u, {
-    headers: { 'User-Agent': 'SETU-IIIT-Surat/1.0 (+https://iiitsuratstudents.github.io/iiitsuratstudents/)' }
-  });
-  if (!r.ok) throw new Error(`GDELT failed: ${r.status} ${await r.text()}`);
-  const data = await r.json();
-  const seenTitles = new Set();
-  const domainCount = new Map();
+  try {
+    const data = await fetchJsonWithRetry(u.toString(), {
+      headers: { 'User-Agent': 'SETU-IIIT-Surat/1.0 (+https://iiitsuratstudents.github.io/iiitsuratstudents/)' }
+    }, 4);
 
-  return (data.articles || [])
-    .filter(a => a?.url && a?.title)
-    .filter(a => {
-      const title = normalize(a.title);
-      if (!title || seenTitles.has(title)) return false;
-      const domain = (a.domain || safeDomain(a.url) || 'unknown').toLowerCase();
-      const count = domainCount.get(domain) || 0;
-      if (count >= 2) return false;
-      seenTitles.add(title);
-      domainCount.set(domain, count + 1);
-      return true;
-    })
-    .slice(0, 18)
-    .map(a => ({
-      title: clean(a.title, 300),
-      url: a.url,
-      domain: a.domain || safeDomain(a.url),
-      seenDate: a.seendate || '',
-      language: a.language || '',
-      sourceCountry: a.sourcecountry || ''
-    }));
+    const seenTitles = new Set();
+    const domainCount = new Map();
+    const items = (data.articles || [])
+      .filter(a => a?.url && a?.title)
+      .filter(a => {
+        const title = normalize(a.title);
+        if (!title || seenTitles.has(title)) return false;
+        const domain = (a.domain || safeDomain(a.url) || 'unknown').toLowerCase();
+        const count = domainCount.get(domain) || 0;
+        if (count >= 2) return false;
+        seenTitles.add(title);
+        domainCount.set(domain, count + 1);
+        return true;
+      })
+      .slice(0, 18)
+      .map(a => ({
+        title: clean(a.title, 300),
+        url: a.url,
+        domain: a.domain || safeDomain(a.url),
+        seenDate: a.seendate || '',
+        language: a.language || '',
+        sourceCountry: a.sourcecountry || ''
+      }));
+
+    if (items.length >= 6) return items;
+    console.warn(`GDELT returned only ${items.length} usable items; using RSS fallback.`);
+  } catch (err) {
+    console.warn(`GDELT unavailable after retries: ${err.message}. Using RSS fallback.`);
+  }
+
+  return fetchGoogleNewsFallback(query);
 }
+
+async function fetchJsonWithRetry(url, options = {}, attempts = 4) {
+  let lastError;
+  for (let i = 1; i <= attempts; i++) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 25000);
+    try {
+      const r = await fetch(url, { ...options, signal: controller.signal });
+      if (!r.ok) throw new Error(`HTTP ${r.status}: ${(await r.text()).slice(0, 200)}`);
+      return await r.json();
+    } catch (err) {
+      lastError = err;
+      console.warn(`Fetch attempt ${i}/${attempts} failed: ${err.message}`);
+      if (i < attempts) await sleep(1500 * i);
+    } finally {
+      clearTimeout(timeout);
+    }
+  }
+  throw lastError || new Error('Request failed after retries');
+}
+
+async function fetchGoogleNewsFallback(query) {
+  const rssQuery = query
+    .replace(/[()"]/g, ' ')
+    .replace(/\s+OR\s+/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  const u = new URL('https://news.google.com/rss/search');
+  u.searchParams.set('q', `${rssQuery} when:1d`);
+  u.searchParams.set('hl', 'en-US');
+  u.searchParams.set('gl', 'US');
+  u.searchParams.set('ceid', 'US:en');
+
+  const xml = await fetchTextWithRetry(u.toString(), {
+    headers: { 'User-Agent': 'Mozilla/5.0 SETU-IIIT-Surat/1.0' }
+  }, 3);
+
+  const items = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map(m => m[1]);
+  const out = [];
+  const seen = new Set();
+  const sourceCounts = new Map();
+
+  for (const item of items) {
+    const titleRaw = xmlValue(item, 'title');
+    const linkRaw = xmlValue(item, 'link');
+    const pubDate = xmlValue(item, 'pubDate');
+    const sourceMatch = item.match(/<source(?:\s+url="([^"]*)")?>([\s\S]*?)<\/source>/i);
+    const sourceName = decodeXml(stripCdata(sourceMatch?.[2] || 'Google News'));
+    const sourceUrl = decodeXml(sourceMatch?.[1] || '');
+    const title = decodeXml(stripCdata(titleRaw));
+    const url = decodeXml(stripCdata(linkRaw));
+
+    if (!title || !url) continue;
+    const key = normalize(title);
+    if (!key || seen.has(key)) continue;
+    const domain = safeDomain(sourceUrl) || sourceName || 'Google News';
+    const count = sourceCounts.get(domain) || 0;
+    if (count >= 2) continue;
+
+    seen.add(key);
+    sourceCounts.set(domain, count + 1);
+    out.push({
+      title: clean(title, 300),
+      url,
+      domain: clean(domain, 120),
+      seenDate: pubDate,
+      language: 'English',
+      sourceCountry: ''
+    });
+    if (out.length >= 18) break;
+  }
+
+  if (out.length < 3) throw new Error(`RSS fallback returned only ${out.length} usable items.`);
+  console.log(`Using Google News RSS fallback with ${out.length} source items.`);
+  return out;
+}
+
+async function fetchTextWithRetry(url, options = {}, attempts = 3) {
+  let lastError;
+  for (let i = 1; i <= attempts; i++) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 25000);
+    try {
+      const r = await fetch(url, { ...options, signal: controller.signal });
+      if (!r.ok) throw new Error(`HTTP ${r.status}: ${(await r.text()).slice(0, 200)}`);
+      return await r.text();
+    } catch (err) {
+      lastError = err;
+      console.warn(`RSS fetch attempt ${i}/${attempts} failed: ${err.message}`);
+      if (i < attempts) await sleep(1200 * i);
+    } finally {
+      clearTimeout(timeout);
+    }
+  }
+  throw lastError || new Error('RSS request failed after retries');
+}
+
+function xmlValue(item, tag) {
+  const m = item.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, 'i'));
+  return m?.[1] || '';
+}
+function stripCdata(s='') { return s.replace(/^<!\[CDATA\[/, '').replace(/\]\]>$/, ''); }
+function decodeXml(s='') {
+  return s
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;|&apos;/g, "'");
+}
+function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
 
 async function summarize(topic, label, sources) {
   const sourceText = sources.map((s, i) =>
