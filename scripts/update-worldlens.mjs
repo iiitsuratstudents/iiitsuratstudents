@@ -119,7 +119,7 @@ async function fetchPublisherFeeds(topic) {
 async function fetchOneFeed(feed) {
   const xml = await fetchTextWithRetry(feed.url, {
     headers: {
-      'User-Agent': 'Mozilla/5.0 (compatible; SETU-IIIT-Surat/1.0; +https://iiitsuratstudents.github.io/iiitsuratstudents/)',
+      'User-Agent': 'Mozilla/5.0 (compatible; SETU-IIIT-Surat/1.0; +https://iiitsuratstudents.github.io/)',
       'Accept': 'application/rss+xml, application/xml, text/xml, */*'
     }
   }, 3);
