@@ -1,69 +1,80 @@
 {
-  "generatedAt": "2026-09-23T16:35:32.202Z",
+  "generatedAt": "2026-09-23T20:33:38.151Z",
   "provider": "Local Ollama / qwen3:1.7b",
   "retrieval": "Direct publisher RSS feeds",
   "topics": {
     "geopolitics": {
       "kicker": "Geopolitics",
-      "summary": "Today's lens covers a range of geopolitical developments, including legal and political actions, international relations, and regional conflicts.",
+      "summary": "Today's lens covers legal, political, and sports developments, highlighting tensions, legal outcomes, and international relations.",
       "stories": [
         {
-          "title": "Harvey Weinstein Sentenced to 15 Years in Prison",
-          "body": "British broadcaster BBC reported that Harvey Weinstein, the former CEO of NBC Universal, was sentenced to 15 years in prison for sexual assault. The case highlights ongoing issues of sexual harassment and legal accountability in the entertainment industry.",
-          "whyItMatters": "This case underscores the importance of legal justice and the fight against sexual harassment, even in the entertainment sector.",
+          "title": "Harvey Weinstein's Retrial",
+          "body": "Al Jazeera reports that Harvey Weinstein has been sentenced to 15 years in prison for sexual assault in a retrial. The case has sparked global attention, with critics calling for justice and accountability in the legal system.",
+          "whyItMatters": "The retrial highlights ongoing debates about justice, accountability, and the role of the legal system in addressing sexual assault.",
           "sources": [
+            {
+              "name": "Al Jazeera",
+              "url": "https://www.aljazeera.com/news/2026/9/23/harvey-weinstein-sentenced-to-15-years-in-sexual-assault-retrial?traffic_source=rss"
+            },
             {
               "name": "BBC World",
               "url": "https://www.bbc.co.uk/news/articles/cm98626n260yo?at_medium=RSS&at_campaign=rss"
-            },
-            {
-              "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/23/argentina-to-un-falkland-islands-are-a-national?traffic_source=rss"
             }
           ]
         },
         {
-          "title": "Yemeni Government Pushes to Reverse Houthi Gains",
-          "body": "The Yemeni government is taking a military and diplomatic approach to counter the Houthi rebels' recent gains. This development reflects the ongoing conflict in Yemen and the complex dynamics of power and control in the region.",
-          "whyItMatters": "The military and diplomatic efforts by the Yemeni government could influence the future of the conflict and regional stability in the Middle East.",
+          "title": "UN Crisis Amid Unilateral Actions",
+          "body": "Al Jazeera reports that major powers are acting unilaterally, raising concerns about the UN's ability to maintain international order. Experts warn that the lack of consensus could undermine global cooperation and stability.",
+          "whyItMatters": "The UN's credibility is at risk if major powers act without coordination, potentially leading to a breakdown in international cooperation.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/23/yemeni-government-in-military-and-diplomatic-push-to-reverse-houthi-gains?traffic_source=rss"
+              "url": "https://www.aljazeera.com/news/2026/9/23/as-major-powers-act-unilaterally-experts-say-un-faces-crisis-in-new-york?traffic_source=rss"
             },
             {
-              "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/23/argentina-to-un-falkland-islands-are-a-national?traffic_source=rss"
+              "name": "The Guardian World",
+              "url": "https://www.theguardian.com/uk-news/2026/sep/23/argentina-president-attacks-un-over-inaction-on-falkland-islands-sovereignty"
             }
           ]
         },
         {
-          "title": "Argentina Claims Falkland Islands as National Cause",
-          "body": "Argentina has formally asserted that the Falkland Islands are a 'national cause' and are part of its territory. This claim comes amid tensions over sovereignty and territorial disputes in the South Atlantic.",
-          "whyItMatters": "This assertion could impact international relations and the resolution of territorial disputes in the South Atlantic, affecting regional security and diplomacy.",
+          "title": "Afcon 2027 Qualifier",
+          "body": "Al Jazeera reports that the Ivory Coast vs. Ghana qualifier for the Africa Cup of Nations 2027 is set for a competitive match. The match will be a key test for both teams' strategies and morale.",
+          "whyItMatters": "The qualifier could influence the competitive landscape of the Africa Cup of Nations and set the stage for potential playoff matches in 2027.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/23/argentina-to-un-falkland-islands-are-a-national?traffic_source=rss"
-            },
-            {
-              "name": "BBC World",
-              "url": "https://www.bbc.co.uk/news/articles/cry8zwwq21pxo?at_medium=RSS&at_campaign=rss"
+              "url": "https://www.aljazeera.com/sports/2026/9/23/ivory-coast-vs-ghana-caf-afcon-qualifier-prediction-teams-lineups?traffic_source=rss"
             }
           ]
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-23T16:35:32.202Z"
+      "updatedAt": "2026-09-23T20:33:38.151Z"
     },
     "science": {
       "kicker": "Science & Nature",
-      "summary": "Today's lens covers ecological, technological, and archaeological developments impacting global understanding and future challenges.",
+      "summary": "Today's lens covers scientific advancements, environmental impacts, and archaeological discoveries, highlighting both cutting-edge research and real-world consequences.",
       "stories": [
         {
-          "title": "UK aphid outbreak devastates lettuces",
-          "body": "A severe aphid outbreak in the UK has caused millions of lettuces to be destroyed, raising concerns about agricultural sustainability and pest control strategies. The outbreak highlights the vulnerability of crops to invasive species and the need for more effective biological control methods.",
-          "whyItMatters": "This event underscores the importance of managing invasive species to protect food security and agricultural productivity.",
+          "title": "El Niño and Hurricane Polo",
+          "body": "A BBC Science report explores whether El Niño caused Hurricane Polo to become the most powerful storm of the season. The article notes that while El Niño can influence weather patterns, the exact relationship between the two is still under investigation. The study emphasizes the complexity of climate systems and the need for further research.",
+          "whyItMatters": "Understanding climate patterns and their impacts is crucial for predicting future weather events and developing effective climate strategies.",
+          "sources": [
+            {
+              "name": "BBC Science",
+              "url": "https://www.bbc.co.uk/news/videos/cm93v2zz4w7qo?at_medium=RSS&at_campaign=rss"
+            },
+            {
+              "name": "BBC Science",
+              "url": "https://www.bbc.co.uk/news/articles/ckd79wlg2wl8o?at_medium=RSS&at_campaign=rss"
+            }
+          ]
+        },
+        {
+          "title": "Lettuce Crop Damage in the UK",
+          "body": "A BBC Science article reports on the impact of an aphid outbreak on lettuces in the UK, leading to significant crop losses. The report highlights the challenges faced by farmers in managing pests and the importance of sustainable agricultural practices to prevent future outbreaks.",
+          "whyItMatters": "Agricultural challenges and pest management are critical for food security and environmental sustainability, emphasizing the need for innovative solutions in farming.",
           "sources": [
             {
               "name": "BBC Science",
@@ -72,75 +83,68 @@
           ]
         },
         {
-          "title": "Opencast mining risks reawakening geological faults",
-          "body": "Research from The Guardian Science reveals that opencast mining in the UK could reawaken dormant geological faults, posing potential risks for seismic activity and infrastructure stability. The study emphasizes the need for careful geological assessments in mining operations.",
-          "whyItMatters": "Understanding the geological risks associated with mining is critical for preventing natural disasters and ensuring safe industrial operations.",
+          "title": "Quantum Black Holes and Geological Risks",
+          "body": "A ScienceDaily article discusses the latest research on quantum black holes and their potential impact on the Large Hadron Collider (LHC). The study suggests that the LHC has ruled out another possible location for quantum black holes, contributing to our understanding of fundamental physics. The article also touches on the risks associated with opencast mining, which can reawaken dormant geological faults.",
+          "whyItMatters": "Advancements in physics and geology are essential for understanding the universe and mitigating natural risks, highlighting the importance of interdisciplinary research.",
           "sources": [
+            {
+              "name": "ScienceDaily",
+              "url": "https://www.sciencedaily.com/releases/2026/09/260922005649.htm"
+            },
             {
               "name": "The Guardian Science",
               "url": "https://www.theguardian.com/science/2026/sep/23/how-opencast-mining-risks-reawakening-dormant-geological-faults"
             }
           ]
-        },
-        {
-          "title": "New concrete absorbs CO2 and is stronger than steel",
-          "body": "A breakthrough in material science has led to the development of a new type of concrete that can absorb carbon dioxide from the air and is significantly stronger than steel. This innovation could revolutionize construction and help combat climate change by reducing emissions.",
-          "whyItMatters": "This development offers a promising solution for sustainable construction and climate change mitigation.",
-          "sources": [
-            {
-              "name": "ScienceDaily",
-              "url": "https://www.sciencedaily.com/releases/2026/09/260921081105.htm"
-            }
-          ]
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-23T16:35:32.202Z"
+      "updatedAt": "2026-09-23T20:33:38.151Z"
     },
     "economy": {
       "kicker": "Economic",
-      "summary": "Today's lens covers a mix of international political developments, economic forecasts, and business news.",
+      "summary": "Today's lens covers a mix of economic developments, including legal rulings, sports revenue, geopolitical tensions, and business trends.",
       "stories": [
         {
-          "title": "Yemeni government in military and diplomatic push to reverse Houthi gains",
-          "body": "The Yemeni government has launched a military and diplomatic push to reverse recent gains made by the Houthi rebels, who have been fighting the government in Yemen. This move comes as the government seeks to regain control over key areas and stabilize the country's局势.",
-          "whyItMatters": "This development highlights the ongoing conflict in Yemen and the potential for renewed military engagement.",
+          "title": "Harvey Weinstein Sentenced to 15 Years in Sexual Assault Retrial",
+          "body": "Al Jazeera reported that Harvey Weinstein was sentenced to 15 years in prison for sexual assault, marking the first retrial of his case. The ruling comes amid ongoing legal battles and public scrutiny over his past convictions.",
+          "whyItMatters": "This legal development highlights the ongoing impact of past misconduct and the importance of justice in the entertainment industry.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/23/yemeni-government-in-military-and-diplomatic-push-to-reverse-houthi-gains?traffic_source=rss"
+              "url": "https://www.aljazeera.com/news/2026/9/23/harvey-weinstein-sentenced-to-15-years-in-sexual-assault-retrial?traffic_source=rss"
             },
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/23/kpmg-manager-says-she-was-fired-after-facing-harassment-over-her-keffiyeh?traffic_source=rss"
+              "url": "https://www.aljazeera.com/sports/2026/9/23/man-utd-losses-jump-almost-a-third-despite-record-revenues?traffic_source=rss"
             }
           ]
         },
         {
-          "title": "Argentina to UN: Falkland Islands are a ‘national cause’",
-          "body": "Argentina has formally requested that the United Nations recognize the Falkland Islands as a national cause, emphasizing their strategic and historical significance. This move is part of a broader effort to assert Argentina's claim over the islands, which have been a point of contention between Argentina and the United Kingdom.",
-          "whyItMatters": "This development underscores the geopolitical tensions between Argentina and the UK over territorial claims.",
+          "title": "Manchester United's Losses Jump to $57M Despite Record Revenue",
+          "body": "Al Jazeera reported that Manchester United's losses increased by nearly a third to $57 million, despite the club's record revenue. This reflects the challenges of maintaining financial stability in sports while facing competitive pressures.",
+          "whyItMatters": "The financial challenges faced by sports teams underscore the complexities of managing revenue and costs in the global sports industry.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/23/argentina-to-un-falkland-islands-are-a-national?traffic_source=rss"
+              "url": "https://www.aljazeera.com/sports/2026/9/23/man-utd-losses-jump-almost-a-third-despite-record-revenues?traffic_source=rss"
             }
           ]
         },
         {
-          "title": "KPMG manager says she was fired after facing harassment over her keffiyeh",
-          "body": "A KPMG manager in the US was fired after she faced harassment over her keffiyeh, a traditional headscarf worn by Arab and Muslim communities. The incident highlights the challenges faced by individuals in the workplace due to their cultural attire.",
-          "whyItMatters": "This incident reflects the broader issue of workplace discrimination and the impact of cultural attire on professional settings.",
+          "title": "McDonald’s Targets KFC and Rivals as Gen Z Flocks to Fried Chicken",
+          "body": "The Guardian Business reported that McDonald’s plans to take on KFC and other fast-food chains as Gen Z consumers flock to fried chicken. This shift in consumer behavior highlights the evolving landscape of the food industry.",
+          "whyItMatters": "The rise of Gen Z in the food market indicates a shift in consumer preferences and the need for businesses to adapt to changing trends.",
           "sources": [
             {
-              "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/23/kpmg-manager-says-she-was-fired-after-facing-harassment-over-her-keffiyeh?traffic_source=rss"
+              "name": "The Guardian Business",
+              "url": "https://www.theguardian.com/business/2026/sep/23/mcdonalds-to-take-on-chicken-shops-for-gen-zs-insatiable-appetite"
             }
           ]
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-23T16:35:32.202Z"
+      "updatedAt": "2026-09-23T20:33:38.151Z"
     }
   }
 }
