@@ -1,43 +1,51 @@
 {
-  "generatedAt": "2026-09-24T08:36:00.250Z",
+  "generatedAt": "2026-09-24T12:40:13.736Z",
   "provider": "Local Ollama / qwen3:1.7b",
   "retrieval": "Direct publisher RSS feeds",
   "topics": {
     "geopolitics": {
-      "kicker": "Global Brief",
-      "summary": "Today's lens covers key developments in geopolitics, AI, humanitarian crises, and regional conflicts, highlighting the complex interplay of international relations and global challenges.",
+      "kicker": "Geopolitics",
+      "summary": "The day highlights ongoing conflicts, international relations, and technological developments, reflecting the complex interplay of global events.",
       "stories": [
         {
-          "title": "AI Race Intensifies as China and US Compete",
-          "body": "China and the United States are locked in a technological rivalry, with China's state-backed AI initiatives gaining momentum. Al Jazeera reports that China's AI research is advancing rapidly, while the US emphasizes innovation and ethical standards. The competition is seen as critical for global technological leadership.",
-          "whyItMatters": "The AI race could shape future economic and military advantages, influencing global technological governance and competition.",
+          "title": "Ethiopia's Tigray Conflict Escalates",
+          "body": "Fighting between Ethiopian forces and Tigray rebels has intensified, with reports of increased violence and casualties. The conflict, which has been ongoing since 2023, has drawn international attention and raised concerns about regional stability. Both sides claim to be conducting military operations to achieve their strategic goals.",
+          "whyItMatters": "The escalating conflict in Ethiopia underscores the challenges of managing internal conflicts and the potential for wider regional instability.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/24/china-vs-us-who-is-winning-the-ai-race-in-four-charts?traffic_source=rss"
+              "url": "https://www.aljazeera.com/news/2026/9/24/fighting-widens-across-ethiopia-as-tigray-clashes-escalate?traffic_source=rss"
+            },
+            {
+              "name": "BBC World",
+              "url": "https://www.bbc.co.uk/news/articles/cry8zwwq21pxo?at_medium=RSS&at_campaign=rss"
+            }
+          ]
+        },
+        {
+          "title": "US-China Trade Talks Focus on AI and Cybersecurity",
+          "body": "The Trump-Xi summit focused on trade, artificial intelligence, Iran, and Taiwan, highlighting the growing complexity of US-China relations. Discussions included potential trade agreements and technological competition, reflecting the broader geopolitical tensions between the two major powers.",
+          "whyItMatters": "The summit underscores the evolving nature of international relations and the strategic competition between the United States and China in key global domains.",
+          "sources": [
+            {
+              "name": "Al Jazeera",
+              "url": "https://www.aljazeera.com/news/liveblog/2026/9/24/trump-xi-summit-live-trade-ai-iran-and-taiwan-top-us-china-talks?traffic_source=rss"
             },
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/24/monarchy-aligned-pam-leads-in-morocco-election-provisional-results?traffic_source=rss"
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/24/russia-attacks-ukraine-while-zelenskyy-speaks-at-unga?traffic_source=rss"
             }
           ]
         },
         {
-          "title": "UN Funding Cuts Affect Refugees in Cox’s Bazar",
-          "body": "The United Nations has cut funding for the Cox’s Bazar settlement, a vital refuge for Rohingya refugees. Al Jazeera reports that the reduction in financial support threatens the stability and safety of the population, highlighting the strain on humanitarian efforts.",
-          "whyItMatters": "The impact of funding cuts on refugee communities underscores the importance of international aid and the need for sustainable humanitarian solutions.",
+          "title": "Russia Attacks Ukraine While Zelenskyy Speaks at UNGA",
+          "body": "Russia launched attacks on Ukraine, while Ukrainian President Zelenskyy addressed the United Nations General Assembly. The conflict continues to shape international perceptions of war and diplomacy, with the UN seeking to address the humanitarian crisis and the broader geopolitical implications.",
+          "whyItMatters": "The ongoing conflict between Russia and Ukraine highlights the persistent challenges of international peace and the role of the United Nations in mediating global disputes.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/24/un-funding-cuts-hit-refugees-at-coxs-bazar-settlement?traffic_source=rss"
-            }
-          ]
-        },
-        {
-          "title": "Ethiopia and Tigray Clash Over Border Conflicts",
-          "body": "Ethiopia and Tigray have accused each other of launching offensives, escalating tensions in the region. BBC reports that the conflict has led to fears of a renewed war, with both sides engaging in military maneuvers and diplomatic efforts to de-escalate the situation.",
-          "whyItMatters": "The ongoing conflict in Ethiopia could have broader regional implications, affecting stability and security in the Horn of Africa.",
-          "sources": [
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/24/russia-attacks-ukraine-while-zelenskyy-speaks-at-unga?traffic_source=rss"
+            },
             {
               "name": "BBC World",
               "url": "https://www.bbc.co.uk/news/articles/cry8zwwq21pxo?at_medium=RSS&at_campaign=rss"
@@ -46,17 +54,21 @@
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-24T08:36:00.250Z"
+      "updatedAt": "2026-09-24T12:40:13.736Z"
     },
     "science": {
       "kicker": "Science & Nature",
-      "summary": "Today's lens covers scientific discoveries, environmental concerns, and historical insights impacting students globally.",
+      "summary": "Today's lens covers scientific discoveries, environmental concerns, and archaeological findings, highlighting advancements and challenges in various fields.",
       "stories": [
         {
-          "title": "Cancer-Causing Chemical Detected in Residents Near Factory",
-          "body": "A study by the BBC Science team found elevated levels of a cancer-causing chemical in residents near a factory. The chemical, which is not yet fully understood, was detected through blood tests. This raises concerns about potential health risks and the environmental impact of industrial activity.",
-          "whyItMatters": "The discovery highlights the importance of monitoring industrial pollutants and their effects on public health.",
+          "title": "Elephants use medicinal plants to treat themselves",
+          "body": "Researchers have discovered that elephants use specific medicinal plants to treat ailments, showcasing the complex relationship between wildlife and their environment. The findings suggest that elephants may have developed knowledge of medicinal plants through observation and trial, highlighting the importance of preserving natural habitats for biodiversity.",
+          "whyItMatters": "Understanding how animals interact with their environment can inform conservation efforts and promote coexistence between humans and wildlife.",
           "sources": [
+            {
+              "name": "BBC Science",
+              "url": "https://www.bbc.co.uk/news/articles/cv1j4yr6j2p0o?at_medium=RSS&at_campaign=rss"
+            },
             {
               "name": "BBC Science",
               "url": "https://www.bbc.co.uk/news/articles/cjly4rv0q3l0o?at_medium=RSS&at_campaign=rss"
@@ -64,83 +76,79 @@
           ]
         },
         {
-          "title": "Tropical Trees Breathing at Night to Survive Drought",
-          "body": "Research from ScienceDaily reveals that some tropical trees have developed a unique ability to breathe at night, allowing them to conserve water during dry periods. This adaptation could be crucial for future climate resilience in arid regions.",
-          "whyItMatters": "Understanding such natural adaptations can inform strategies for sustainable agriculture and conservation efforts.",
+          "title": "Waste sector crisis could see rubbish piling up on streets",
+          "body": "Experts warn that the waste sector is facing a crisis, with potential for increased rubbish accumulation on streets due to inefficient collection and disposal systems. This issue highlights the need for sustainable waste management practices to prevent environmental degradation and public health risks.",
+          "whyItMatters": "Effective waste management is crucial for maintaining public health and environmental sustainability, emphasizing the importance of policy and innovation in addressing waste challenges.",
           "sources": [
             {
-              "name": "ScienceDaily",
-              "url": "https://www.sciencedaily.com/releases/2026/09/260922005712.htm"
+              "name": "BBC Science",
+              "url": "https://www.bbc.co.uk/news/articles/cqlymw74g20ro?at_medium=RSS&at_campaign=rss"
             }
           ]
         },
         {
-          "title": "Roman Suburban Life Revealed in Rare Finds",
-          "body": "Archaeologists have uncovered rare artifacts that provide insights into the daily lives of Roman suburbanites in Bath. These findings offer a glimpse into the social and economic structures of ancient communities, enriching our understanding of historical societies.",
-          "whyItMatters": "Such discoveries contribute to the broader narrative of human history and cultural evolution, fostering a deeper appreciation for the past.",
+          "title": "Stonehenge’s 6-ton altar stone may have traveled from Scotland by glacier",
+          "body": "Archaeologists have proposed that a 6-ton altar stone at Stonehenge may have been transported from Scotland by glacial movement. This discovery provides insight into the ancient construction techniques and the movement of materials across vast distances, shedding light on prehistoric human activity and migration patterns.",
+          "whyItMatters": "Understanding ancient human movements and technologies can enhance our knowledge of historical civilizations and their interactions, contributing to broader archaeological research.",
           "sources": [
             {
-              "name": "The Guardian Science",
-              "url": "https://www.theguardian.com/science/2026/sep/23/archaeologists-clues-suburban-life-roman-times-bath"
+              "name": "ScienceDaily",
+              "url": "https://www.sciencedaily.com/releases/2026/09/260922005715.htm"
             }
           ]
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-24T08:36:00.250Z"
+      "updatedAt": "2026-09-24T12:40:13.736Z"
     },
     "economy": {
       "kicker": "Economic",
-      "summary": "Today's lens covers a mix of global economic developments, technological advancements, and political dynamics.",
+      "summary": "Today's lens covers global economic developments, including conflicts, trade, and consumer trends, highlighting the complex interplay between geopolitics and economic dynamics.",
       "stories": [
         {
-          "title": "Ukraine Sends North Korean POWs to South Korea",
-          "body": "Russian President Vladimir Putin has claimed that Ukraine sent two North Korean prisoners of war (POWs) to South Korea, citing a statement from Ukrainian President Volodymyr Zelenskyy. The claim is seen as a strategic move to bolster Ukraine's international standing and demonstrate its commitment to peace and reconciliation.",
-          "whyItMatters": "This development highlights the complex interplay between military actions and diplomatic efforts in the region.",
+          "title": "Ethiopia's Tigray Conflict Intensifies",
+          "body": "Fighting in Tigray, Ethiopia, has escalated, with reports of increased violence and displacement. The conflict has drawn international attention, with concerns about humanitarian crises and regional stability.",
+          "whyItMatters": "The ongoing conflict in Ethiopia highlights the impact of geopolitical tensions on local populations and the need for international mediation.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/24/zelenskyy-says-ukraine-sent-two-north-korean-pows-to-south-korea?traffic_source=rss"
+              "url": "https://www.aljazeera.com/news/2026/9/24/fighting-widens-across-ethiopia-as-tigray-clashes-escalate?traffic_source=rss"
             },
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/24/un-funding-cuts-hit-refugees-at-coxs-bazar-settlement?traffic_source=rss"
+              "url": "https://www.aljazeera.com/news/liveblog/2026/9/24/trump-xi-summit-live-trade-ai-iran-and-taiwan-top-us-china-talks?traffic_source=rss"
             }
           ]
         },
         {
-          "title": "AI Race Between China and the US",
-          "body": "Al Jazeera reports on the ongoing competition in artificial intelligence (AI) between China and the United States. The article outlines the technological advancements and strategic investments from both nations, emphasizing the potential for global impact and the role of AI in shaping future industries.",
-          "whyItMatters": "The AI race between China and the US reflects broader geopolitical tensions and technological competition that will influence global innovation and policy.",
+          "title": "Rising Assaults on UK Rail Services",
+          "body": "There has been a substantial increase in reported assaults on Britain's rail services, raising concerns about public safety and the reliability of transportation infrastructure in the UK.",
+          "whyItMatters": "The rise in rail assaults underscores the need for improved security measures and public awareness to protect commuters.",
+          "sources": [
+            {
+              "name": "BBC Business",
+              "url": "https://www.bbc.co.uk/news/articles/c6z0z5dz884lo?at_medium=RSS&at_campaign=rss"
+            }
+          ]
+        },
+        {
+          "title": "US-China Trade and AI Talks Continue",
+          "body": "The US-China trade and AI talks have continued, with both sides focusing on key issues such as technology, trade policies, and regional security. The discussions highlight the ongoing competition between the two major economies.",
+          "whyItMatters": "The evolving US-China trade and AI relations reflect broader global trends in technological and economic competition, influencing international trade and innovation.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/24/china-vs-us-who-is-winning-the-ai-race-in-four-charts?traffic_source=rss"
+              "url": "https://www.aljazeera.com/news/liveblog/2026/9/24/trump-xi-summit-live-trade-ai-iran-and-taiwan-top-us-china-talks?traffic_source=rss"
             },
             {
               "name": "BBC Business",
               "url": "https://www.bbc.co.uk/news/articles/c6gqdgg8w59xo?at_medium=RSS&at_campaign=rss"
             }
           ]
-        },
-        {
-          "title": "UN Funding Cuts Affect Refugees in Cox’s Bazar",
-          "body": "The United Nations has announced funding cuts to the Cox’s Bazar settlement, a major refugee camp in Bangladesh. This decision has raised concerns about the ongoing humanitarian crisis and the ability of the settlement to support refugees in need.",
-          "whyItMatters": "The impact of UN funding cuts on refugee populations underscores the challenges of maintaining humanitarian aid in times of political and economic uncertainty.",
-          "sources": [
-            {
-              "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/24/un-funding-cuts-hit-refugees-at-coxs-bazar-settlement?traffic_source=rss"
-            },
-            {
-              "name": "The Guardian Business",
-              "url": "https://www.theguardian.com/business/2026/sep/23/mcdonalds-to-take-on-chicken-shops-for-gen-zs-insatiable-appetite"
-            }
-          ]
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-24T08:36:00.250Z"
+      "updatedAt": "2026-09-24T12:40:13.736Z"
     }
   }
 }
