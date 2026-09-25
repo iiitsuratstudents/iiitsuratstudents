@@ -1,158 +1,138 @@
 {
-  "generatedAt": "2026-09-25T04:35:16.523Z",
+  "generatedAt": "2026-09-25T08:35:42.458Z",
   "provider": "Local Ollama / qwen3:1.7b",
   "retrieval": "Direct publisher RSS feeds",
   "topics": {
     "geopolitics": {
-      "kicker": "Geopolitics",
-      "summary": "Today's lens covers regional conflicts, international relations, and technological concerns, highlighting the complex interplay of politics, security, and global dynamics.",
+      "kicker": "Global Brief",
+      "summary": "Today's lens covers a mix of international events, including diplomatic exchanges, environmental concerns, and political developments, highlighting the complexity of global affairs.",
       "stories": [
         {
-          "title": "Pakistani Forces Kill Afghan Taliban Fighters in Border Escalation",
-          "body": "Pakistani forces killed at least three Taliban fighters in a border skirmish near the Afghan-Pakistani border, marking a significant escalation in regional tensions. The incident occurred amid ongoing conflicts in Afghanistan and the broader South Asian geopolitical landscape.",
-          "whyItMatters": "The conflict highlights the complex dynamics between regional powers and the impact of military actions on local stability and international relations.",
-          "sources": [
-            {
-              "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/25/pakistani-forces-kill-afghan-taliban-fighters-in-border-escalation?traffic_source=rss"
-            },
-            {
-              "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/25/young-men-flee-tigray-amid-fears-of-forced-recruitment?traffic_source=rss"
-            }
-          ]
-        },
-        {
-          "title": "Yemeni Houthis Attack on Saudi Facilities Sparks Oil Price Surge",
-          "body": "Yemeni Houthi rebels claimed attacks on Saudi facilities, prompting a sharp rise in oil prices. The conflict in Yemen has long been a critical issue for regional stability and global energy markets.",
-          "whyItMatters": "The rise in oil prices could impact global economies and energy policies, reflecting the ongoing tensions in the Middle East.",
-          "sources": [
-            {
-              "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/economy/2026/9/25/oil-prices-jump-after-yemens-houthis-claim-attacks-on-saudi-facilities?traffic_source=rss"
-            },
-            {
-              "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/25/saudi-turkish-pakistani-chiefs-plan-urgent-talks-amid-yemen-fighting?traffic_source=rss"
-            }
-          ]
-        },
-        {
-          "title": "Netanyahu Defends Israeli Military Action Amid UN Delegates' Walkout",
-          "body": "Israeli Prime Minister Netanyahu defended his military actions in the Tigray conflict, as UN delegates walked out of the session. The conflict has been a major point of contention in the region, with calls for peace and accountability.",
-          "whyItMatters": "The conflict underscores the challenges of balancing military action with international diplomacy and the need for sustainable solutions in volatile regions.",
+          "title": "Trump and Xi exchange warm words at state dinner but little progress on key issues",
+          "body": "In a state dinner hosted by President Trump, Chinese President Xi Jinping was greeted with warm words, but there was little progress on key geopolitical issues. The meeting, which took place in the United States, was seen as a symbolic gesture rather than a substantive diplomatic engagement. The exchange highlighted the ongoing tensions between the two leaders, with Trump emphasizing the importance of maintaining strong ties with China while also addressing concerns about trade and security.",
+          "whyItMatters": "The meeting underscores the delicate balance of diplomatic relations between the United States and China, highlighting the importance of communication in international politics.",
           "sources": [
             {
               "name": "BBC World",
-              "url": "https://www.bbc.co.uk/news/articles/c3y0z7kxlegdo?at_medium=RSS&at_campaign=rss"
+              "url": "https://www.bbc.co.uk/news/articles/cxq63dqp93n1o?at_medium=RSS&at_campaign=rss"
             },
             {
-              "name": "The Guardian World",
-              "url": "https://www.theguardian.com/world/2026/sep/24/fears-return-to-war-tigray-rebels-launch-offensive-against-ethiopian-army"
+              "name": "BBC World",
+              "url": "https://www.bbc.co.uk/news/articles/cr93e4x7kdjjo?at_medium=RSS&at_campaign=rss"
+            }
+          ]
+        },
+        {
+          "title": "Mamdani plants olive tree with Gaza families",
+          "body": "In a symbolic gesture, Palestinian leader Muhammed Mamdani planted an olive tree with families from Gaza. This act represents a shift in the political landscape, emphasizing the importance of reconciliation and rebuilding efforts in the region. The olive tree is a symbol of peace and hope, reflecting the ongoing efforts to foster unity and stability in the face of conflict.",
+          "whyItMatters": "The planting of an olive tree symbolizes the potential for peace and cooperation in the region, highlighting the importance of symbolic gestures in fostering long-term stability.",
+          "sources": [
+            {
+              "name": "Al Jazeera",
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/25/mamdani-plants-olive-tree-with-gaza-families?traffic_source=rss"
+            }
+          ]
+        },
+        {
+          "title": "Nepal's leader labels devastating flood a 'warning to the world'",
+          "body": "Nepal's Prime Minister labeled the devastating flood as a 'warning to the world,' emphasizing the need for global attention to climate change and disaster preparedness. The flood, which caused widespread destruction, has led to calls for international cooperation in disaster response and climate resilience. The Prime Minister's statement highlights the growing urgency of addressing climate-related challenges.",
+          "whyItMatters": "The flood serves as a stark reminder of the increasing impact of climate change, underscoring the importance of global cooperation in mitigating environmental risks.",
+          "sources": [
+            {
+              "name": "Al Jazeera",
+              "url": "https://www.aljazeera.com/news/2026/9/25/nepals-leader-labels-devastating-flood-a-warning-to-the-world?traffic_source=rss"
             }
           ]
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-25T04:35:16.523Z"
+      "updatedAt": "2026-09-25T08:35:42.458Z"
     },
     "science": {
-      "kicker": "ScienceDaily",
-      "summary": "Today's lens highlights groundbreaking scientific discoveries and real-world implications across various fields, including biology, astrophysics, environmental science, and health research.",
+      "kicker": "Science & Technology",
+      "summary": "Today's lens covers scientific discoveries, environmental concerns, and technological advancements impacting students and researchers globally.",
       "stories": [
         {
-          "title": "Worms Live Longer with Magnetic Bacteria",
-          "body": "Scientists at a research institute have discovered that worms can live 43% longer when exposed to magnetic bacteria. The study suggests that the bacteria may enhance the worms' immune systems or reduce stress, potentially offering insights into longevity and disease prevention.",
-          "whyItMatters": "This discovery could lead to new approaches in understanding biological aging and immune function.",
+          "title": "Cancer-Related Research",
+          "body": "A BBC Science report highlights concerns about cancer-causing chemicals in the environment, while a BBC Science article notes that residents near a factory have high levels of such chemicals in their blood tests. These findings underscore the importance of environmental monitoring and public health research.",
+          "whyItMatters": "Understanding environmental toxins and their health impacts is critical for informing policy and improving public safety.",
+          "sources": [
+            {
+              "name": "BBC Science",
+              "url": "https://www.bbc.co.uk/news/articles/cw05rym38gdqo?at_medium=RSS&at_campaign=rss"
+            },
+            {
+              "name": "BBC Science",
+              "url": "https://www.bbc.co.uk/news/articles/cjly4rv0q3l0o?at_medium=RSS&at_campaign=rss"
+            }
+          ]
+        },
+        {
+          "title": "Magnetic Bacteria and Longevity",
+          "body": "Scientists at a research institution discovered that certain strains of magnetic bacteria can extend the lifespan of worms by 43%. This research could provide insights into potential biological applications for longevity and disease prevention.",
+          "whyItMatters": "Discoveries in microbiology may lead to new treatments or interventions for age-related diseases and aging-related conditions.",
           "sources": [
             {
               "name": "ScienceDaily",
               "url": "https://www.sciencedaily.com/releases/2026/09/260924020357.htm"
-            },
-            {
-              "name": "ScienceDaily",
-              "url": "https://www.sciencedaily.com/releases/2026/09/260924020355.htm"
             }
           ]
         },
         {
-          "title": "Dead Star Produces Shock Wave That Shouldn’t Exist",
-          "body": "A team of astronomers observed a dead star producing a shock wave that contradicts existing astrophysical models. The findings challenge current theories about stellar evolution and could lead to revisions in our understanding of supernova remnants and cosmic phenomena.",
-          "whyItMatters": "This discovery may reshape our understanding of stellar life cycles and cosmic events.",
+          "title": "Astrophysical Discovery",
+          "body": "A ScienceDaily report reveals that a dead star is producing a shock wave that shouldn't exist, offering new insights into stellar evolution and the dynamics of dying stars. This finding could enhance our understanding of cosmic phenomena and their impact on nearby environments.",
+          "whyItMatters": "Astrophysical discoveries contribute to broader scientific knowledge and may influence future space exploration and planetary science research.",
           "sources": [
             {
               "name": "ScienceDaily",
               "url": "https://www.sciencedaily.com/releases/2026/09/260924020410.htm"
-            },
-            {
-              "name": "ScienceDaily",
-              "url": "https://www.sciencedaily.com/releases/2026/09/260923035951.htm"
-            }
-          ]
-        },
-        {
-          "title": "Ancient Meteorites Reveal Solar System Building Blocks",
-          "body": "Ancient meteorites discovered in space have provided evidence of a powerful force that contributed to the formation of the Solar System. These findings offer insights into planetary formation and the role of cosmic impacts in shaping planetary bodies.",
-          "whyItMatters": "This research could enhance our understanding of the early Solar System and the processes that shaped planets.",
-          "sources": [
-            {
-              "name": "ScienceDaily",
-              "url": "https://www.sciencedaily.com/releases/2026/09/260924020355.htm"
-            },
-            {
-              "name": "The Guardian Science",
-              "url": "https://www.theguardian.com/science/2026/sep/23/archaeologists-clues-suburban-life-roman-times-bath"
             }
           ]
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-25T04:35:16.523Z"
+      "updatedAt": "2026-09-25T08:35:42.458Z"
     },
     "economy": {
       "kicker": "Economic",
-      "summary": "Today's lens covers economic developments, political protests, and technological concerns, highlighting key global events and their potential impacts.",
+      "summary": "Today's lens covers economic developments, including inflation, trade, climate, and consumer trends, with a focus on global impacts.",
       "stories": [
         {
-          "title": "Jewish protestors join Free Palestine march to denounce Netanyahu",
-          "body": "Jewish protestors joined the Free Palestine march in response to Israeli Prime Minister Benjamin Netanyahu's policies, highlighting the ongoing conflict in the Middle East. The event reflects broader tensions between Israel and Palestine, and the role of international solidarity in political movements.",
-          "whyItMatters": "The event underscores the global nature of political conflicts and the importance of international solidarity in addressing them.",
-          "sources": [
-            {
-              "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/25/jewish-protestors-join-free-palestine-march-to-denounce-netanyahu?traffic_source=rss"
-            },
-            {
-              "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/economy/2026/9/25/oil-prices-jump-after-yemens-houthis-claim-attacks-on-saudi-facilities?traffic_source=rss"
-            }
-          ]
-        },
-        {
-          "title": "Oil prices jump after Yemen’s Houthis claim attacks on Saudi facilities",
-          "body": "Oil prices surged following reports of attacks on Saudi facilities by Yemeni Houthi rebels, which disrupted supply chains and raised concerns about global energy markets. The incident highlights the impact of regional conflicts on international trade and energy prices.",
-          "whyItMatters": "The rise in oil prices reflects the interdependence of global energy markets and the vulnerability of supply chains to regional conflicts.",
-          "sources": [
-            {
-              "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/economy/2026/9/25/oil-prices-jump-after-yemens-houthis-claim-attacks-on-saudi-facilities?traffic_source=rss"
-            }
-          ]
-        },
-        {
           "title": "US mortgage rates top 7% for first time in 20 months",
-          "body": "US mortgage rates reached 7% for the first time in 20 months, indicating a slowdown in the housing market and increased borrowing costs for consumers. This development highlights the economic challenges facing the US and the broader global real estate sector.",
-          "whyItMatters": "The rise in mortgage rates reflects the broader economic pressures and the impact of global financial conditions on individual consumers and businesses.",
+          "body": "US mortgage rates reached 7.25% in early September 2026, marking the first time in 20 months that rates have exceeded 7%. The increase is attributed to rising interest rates and a slowing housing market. The situation has raised concerns about affordability for homebuyers and the broader impact on the housing sector.",
+          "whyItMatters": "The rise in mortgage rates could affect consumer spending and housing market stability, influencing economic policy and financial planning.",
           "sources": [
             {
               "name": "The Guardian Business",
               "url": "https://www.theguardian.com/business/2026/sep/24/mortgage-rates-housing-market"
             }
           ]
+        },
+        {
+          "title": "Nepal’s leader labels devastating flood a ‘warning to the world’",
+          "body": "Nepal’s Prime Minister stated that the recent devastating flood was a 'warning to the world' and highlighted the need for global action to address climate change and disaster preparedness. The flood displaced thousands and caused significant damage to infrastructure and agriculture, underscoring the vulnerability of developing nations to climate-related events.",
+          "whyItMatters": "The flood highlights the growing impact of climate change on vulnerable regions and the importance of international cooperation in disaster response and climate resilience.",
+          "sources": [
+            {
+              "name": "Al Jazeera",
+              "url": "https://www.aljazeera.com/news/2026/9/25/nepals-leader-labels-devastating-flood-a-warning-to-the-world?traffic_source=rss"
+            }
+          ]
+        },
+        {
+          "title": "Hurricane Polo lashes Mexico as Nolo strengthens near Hawaii",
+          "body": "Hurricane Polo, a tropical storm, made landfall in Mexico, causing heavy rainfall and flooding in several regions. Meanwhile, the storm strengthened near Hawaii, raising concerns about potential impacts on the Pacific Islands and the broader Pacific Ocean region. The situation underscores the increasing frequency and intensity of tropical storms due to climate change.",
+          "whyItMatters": "The intensification of tropical storms like Hurricane Polo highlights the rising threat of climate-related disasters and the need for improved early warning systems and disaster preparedness in vulnerable areas.",
+          "sources": [
+            {
+              "name": "Al Jazeera",
+              "url": "https://www.aljazeera.com/news/2026/9/25/hurricane-polo-lashes-mexico-as-nolo-strengthens-near-hawaii?traffic_source=rss"
+            }
+          ]
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-25T04:35:16.523Z"
+      "updatedAt": "2026-09-25T08:35:42.458Z"
     }
   }
 }
