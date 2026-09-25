@@ -1,50 +1,50 @@
 {
-  "generatedAt": "2026-09-25T12:40:29.235Z",
+  "generatedAt": "2026-09-25T16:35:43.280Z",
   "provider": "Local Ollama / qwen3:1.7b",
   "retrieval": "Direct publisher RSS feeds",
   "topics": {
     "geopolitics": {
       "kicker": "Geopolitics",
-      "summary": "Today's lens covers a mix of global events, including international diplomacy, humanitarian crises, and natural disasters, highlighting the complex interplay of political and social dynamics.",
+      "summary": "Today's lens covers regional conflicts, humanitarian crises, sports events, and global security concerns, highlighting the complex interplay of politics, climate, and international relations.",
       "stories": [
         {
-          "title": "Pope's Visit to France",
-          "body": "The Pope is set to visit France, with an estimated 300,000 attendees expected. This event underscores the role of religious leaders in international diplomacy and the significance of cultural and religious exchanges in global relations.",
-          "whyItMatters": "The Pope's visit highlights the importance of interfaith dialogue and the potential for cultural diplomacy in fostering international cooperation.",
+          "title": "Ethiopia's New Rebel Alliance Faces an Old Problem",
+          "body": "Ethiopia's new rebel alliance, formed to counter the Ethiopian government, faces challenges rooted in historical tensions and political instability. The alliance's efforts to gain support are complicated by longstanding ethnic and regional divisions, which have persisted despite recent efforts to promote unity. The group's ability to secure funding and military support remains uncertain, as it struggles to balance its mandate with the broader political landscape of the country.",
+          "whyItMatters": "The alliance's success could influence regional stability and the balance of power in the Horn of Africa.",
           "sources": [
             {
-              "name": "BBC World",
-              "url": "https://www.bbc.co.uk/news/articles/cmq8j904212po?at_medium=RSS&at_campaign=rss"
+              "name": "Al Jazeera",
+              "url": "https://www.aljazeera.com/opinions/2026/9/25/ethiopias-new-rebel-alliance-faces-an-old-problem?traffic_source=rss"
             },
             {
-              "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/25/25-09-sv-tigray-ethiopia-conflict-restarts-et?traffic_source=rss"
+              "name": "The Guardian World",
+              "url": "https://www.theguardian.com/world/2026/sep/24/fears-return-to-war-tigray-rebels-launch-offensive-against-ethiopian-army"
             }
           ]
         },
         {
-          "title": "U.S. and Russia Seek to Revive Ceasefire Talks",
-          "body": "The U.S. is seeking to revive ceasefire talks with Russia following the ongoing conflict in Ukraine. This development reflects the broader geopolitical tensions and the potential for diplomatic solutions in a volatile region.",
-          "whyItMatters": "The revival of ceasefire talks could influence regional stability and peace efforts in the Middle East and Europe.",
+          "title": "Sudanese Refugees Flee to Chad Amid UN Calls for Funding",
+          "body": "More than 55,000 Sudanese refugees have fled to Chad, seeking safety amid ongoing conflict and humanitarian crises. The UN has called for increased funding to support the refugee crisis, highlighting the urgent need for international cooperation to address the growing number of displaced persons. The situation underscores the vulnerability of refugees and the challenges of maintaining humanitarian aid in conflict zones.",
+          "whyItMatters": "The refugee crisis highlights the importance of international solidarity and the need for sustained humanitarian efforts in conflict-affected regions.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/25/us-seeking-to-revive-russia-ukraine-ceasefire-talks?traffic_source=rss"
+              "url": "https://www.aljazeera.com/news/2026/9/25/more-than-55000-sudanese-refugees-flee-to-chad-as-un-calls-for-funding?traffic_source=rss"
             },
             {
-              "name": "BBC World",
-              "url": "https://www.bbc.co.uk/news/articles/c3y0z7kxlegdo?at_medium=RSS&at_campaign=rss"
+              "name": "The Guardian World",
+              "url": "https://www.theguardian.com/world/2026/sep/24/fears-return-to-war-tigray-rebels-launch-offensive-against-ethiopian-army"
             }
           ]
         },
         {
-          "title": "Tigray Conflict Escalates",
-          "body": "Fighting has resumed between Tigray's rebel alliance and Ethiopia's military, raising concerns about the potential for a full-scale civil war. The conflict highlights the complex dynamics of ethnic and regional tensions in the Horn of Africa.",
-          "whyItMatters": "The escalation of the Tigray conflict could have significant implications for regional stability and humanitarian efforts in the Horn of Africa.",
+          "title": "Turkiye vs France in UEFA Nations League",
+          "body": "Turkiye faces France in a crucial UEFA Nations League match, with the outcome potentially impacting the group stage standings. The game is expected to be a high-stakes encounter, with both teams aiming to secure a strong position in the competition. The match is a testament to the competitive nature of European football and the importance of domestic and international competitions in shaping national pride and sports diplomacy.",
+          "whyItMatters": "The match could influence the European football calendar and the competitive dynamics between the participating nations.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/25/25-09-sv-tigray-ethiopia-conflict-restarts-et?traffic_source=rss"
+              "url": "https://www.aljazeera.com/sports/liveblog/2026/9/25/live-turkiye-vs-france-uefa-nations-league?traffic_source=rss"
             },
             {
               "name": "The Guardian World",
@@ -54,93 +54,113 @@
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-25T12:40:29.235Z"
+      "updatedAt": "2026-09-25T16:35:43.280Z"
     },
     "science": {
-      "kicker": "Science & Nature",
-      "summary": "Today's lens covers recent scientific discoveries, environmental concerns, and human health topics, highlighting advancements in biology, climate, and public health.",
+      "kicker": "ScienceDaily",
+      "summary": "Today's lens covers groundbreaking scientific discoveries, technological advancements, and environmental concerns impacting the global academic and scientific community.",
       "stories": [
         {
-          "title": "Cancer-causing chemicals in residents near a factory",
-          "body": "A BBC Science report highlights a study showing residents near a factory have high levels of a cancer-causing chemical in their blood tests. This raises concerns about environmental exposure and potential health risks.",
-          "whyItMatters": "Public health and environmental safety are critical issues that require ongoing monitoring and policy intervention.",
+          "title": "New Sea Spiders Discovered with 'Nightmare Fuel' Properties",
+          "body": "Scientists have identified two new species of sea spiders with unusual biological properties, including the ability to break down complex materials, which could have implications for biotechnology and environmental science.",
+          "whyItMatters": "These findings may lead to new applications in material science and environmental remediation.",
           "sources": [
             {
-              "name": "BBC Science",
-              "url": "https://www.bbc.co.uk/news/articles/cw05rym38gdqo?at_medium=RSS&at_campaign=rss"
+              "name": "ScienceDaily",
+              "url": "https://www.sciencedaily.com/releases/2026/09/260925005412.htm"
             },
             {
-              "name": "BBC Science",
-              "url": "https://www.bbc.co.uk/news/articles/cjly4rv0q3l0o?at_medium=RSS&at_campaign=rss"
+              "name": "ScienceDaily",
+              "url": "https://www.sciencedaily.com/releases/2026/09/260925005430.htm"
             }
           ]
         },
         {
-          "title": "Worms live longer with magnetic bacteria",
-          "body": "Scientists discovered that worms exposed to magnetic bacteria live 43% longer than those without. This finding could have implications for understanding microbial interactions and longevity in organisms.",
-          "whyItMatters": "Understanding microbial effects on health and longevity may lead to new insights in biotechnology and medicine.",
+          "title": "Genetic Disorder Linked to Autism May Be More Prevalent Than Thought",
+          "body": "A rare genetic disorder associated with autism has been found to be more common than previously believed, raising questions about the broader genetic landscape and potential health implications for future generations.",
+          "whyItMatters": "Understanding the prevalence of this disorder could inform genetic research and public health strategies.",
           "sources": [
+            {
+              "name": "ScienceDaily",
+              "url": "https://www.sciencedaily.com/releases/2026/09/260924020405.htm"
+            },
+            {
+              "name": "The Guardian Science",
+              "url": "https://www.theguardian.com/science/2026/sep/25/dna-database-uk-dogs-vital-evidence-police-criminals"
+            }
+          ]
+        },
+        {
+          "title": "CERN Begins Disconnecting Large Hadron Collider",
+          "body": "CERN has initiated the process of disconnecting the Large Hadron Collider, a major particle physics facility, to allow for maintenance and upgrades, which could impact future research in high-energy physics.",
+          "whyItMatters": "This action reflects ongoing efforts to maintain and improve scientific infrastructure, which is critical for advancing fundamental scientific knowledge.",
+          "sources": [
+            {
+              "name": "ScienceDaily",
+              "url": "https://www.sciencedaily.com/releases/2026/09/260925005430.htm"
+            },
             {
               "name": "ScienceDaily",
               "url": "https://www.sciencedaily.com/releases/2026/09/260924020357.htm"
             }
           ]
-        },
-        {
-          "title": "Dead star produces shock wave that shouldn’t exist",
-          "body": "A ScienceDaily report states that a dead star is generating a shock wave that contradicts known physics. This discovery challenges current theories about stellar evolution and cosmic phenomena.",
-          "whyItMatters": "Such findings can expand our understanding of astrophysics and the life cycles of stars.",
-          "sources": [
-            {
-              "name": "ScienceDaily",
-              "url": "https://www.sciencedaily.com/releases/2026/09/260924020410.htm"
-            }
-          ]
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-25T12:40:29.235Z"
+      "updatedAt": "2026-09-25T16:35:43.280Z"
     },
     "economy": {
       "kicker": "Economic",
-      "summary": "Today's lens covers economic developments, including rising fuel prices, humanitarian crises, and geopolitical tensions, highlighting the interconnectedness of global economic and political dynamics.",
+      "summary": "Today's lens covers economic developments, including political tensions, refugee crises, and business news.",
       "stories": [
         {
-          "title": "US seeks to revive Russia-Ukraine ceasefire talks",
-          "body": "The US is seeking to revive ceasefire talks between Russia and Ukraine, aiming to reduce military conflict and stabilize the region. The initiative comes amid growing concerns over the humanitarian impact of ongoing warfare and the potential for a more sustainable resolution.",
-          "whyItMatters": "The potential for a ceasefire could reduce regional instability and mitigate the human and economic costs of prolonged conflict.",
+          "title": "Ethiopia's new rebel alliance faces an old problem",
+          "body": "Ethiopia's new rebel alliance, which includes the Ethiopian Defense Forces and the Ethiopian People's Revolutionary Democratic Front, faces challenges due to historical tensions and political instability. The alliance aims to restore peace and governance but struggles with internal divisions and external pressures.",
+          "whyItMatters": "The alliance's success depends on overcoming historical grievances and securing international support.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/25/us-seeking-to-revive-russia-ukraine-ceasefire-talks?traffic_source=rss"
+              "url": "https://www.aljazeera.com/opinions/2026/9/25/ethiopias-new-rebel-alliance-faces-an-old-problem?traffic_source=rss"
+            },
+            {
+              "name": "The Guardian Business",
+              "url": "https://www.theguardian.com/media/2026/sep/25/trump-media-ban-white-house-pool"
             }
           ]
         },
         {
-          "title": "UK diesel price close to all-time high",
-          "body": "The UK diesel price has reached a record high, driven by rising fuel demand and supply chain disruptions. This development highlights the impact of global economic factors on everyday consumers and the broader energy market.",
-          "whyItMatters": "Elevated fuel prices can affect consumer spending, energy policy, and the broader economy, influencing decisions related to transportation and energy use.",
+          "title": "More than 55,000 Sudanese refugees flee to Chad as UN calls for funding",
+          "body": "Over 55,000 Sudanese refugees have fled to Chad due to ongoing conflict and instability in Sudan. The UN has called for increased funding to support the refugees' livelihoods and ensure their safety, highlighting the humanitarian crisis in the region.",
+          "whyItMatters": "The refugee crisis underscores the need for international cooperation and funding to address displacement and humanitarian needs.",
+          "sources": [
+            {
+              "name": "Al Jazeera",
+              "url": "https://www.aljazeera.com/news/2026/9/25/more-than-55000-sudanese-refugees-flee-to-chad-as-un-calls-for-funding?traffic_source=rss"
+            },
+            {
+              "name": "The Guardian Business",
+              "url": "https://www.theguardian.com/media/2026/sep/25/trump-media-ban-white-house-pool"
+            }
+          ]
+        },
+        {
+          "title": "US backs Elon Musk's bid to overturn €120m EU fine against X",
+          "body": "The US has backed Elon Musk's bid to overturn a €120 million EU fine against X (formerly Twitter), citing concerns over the platform's impact on free speech and digital governance. The decision reflects ongoing debates about regulating social media and its role in public discourse.",
+          "whyItMatters": "The US's support for the bid highlights the tension between free speech and regulatory oversight in the digital age.",
           "sources": [
             {
               "name": "BBC Business",
-              "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss"
-            }
-          ]
-        },
-        {
-          "title": "Humanitarian crisis worsens in Ceuta as thousands remain stranded",
-          "body": "A humanitarian crisis has worsened in Ceuta, a Spanish territory on the border with Morocco, as thousands of people remain stranded due to logistical and political challenges. The situation underscores the complexities of cross-border humanitarian efforts and the impact of geopolitical tensions.",
-          "whyItMatters": "The ongoing crisis highlights the challenges of managing humanitarian aid in politically sensitive regions and the potential for wider humanitarian impact.",
-          "sources": [
+              "url": "https://www.bbc.co.uk/news/articles/cq0m373ee0v0o?at_medium=RSS&at_campaign=rss"
+            },
             {
-              "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/25/humanitarian-crisis-worsens-in-ceuta-as-thousands-remain-stranded?traffic_source=rss"
+              "name": "The Guardian Business",
+              "url": "https://www.theguardian.com/business/2026/sep/24/eu-trump-diesel-export-ban-fuel-prices-europe"
             }
           ]
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-25T12:40:29.235Z"
+      "updatedAt": "2026-09-25T16:35:43.280Z"
     }
   }
 }
