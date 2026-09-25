@@ -1,166 +1,142 @@
 {
-  "generatedAt": "2026-09-25T16:35:43.280Z",
+  "generatedAt": "2026-09-25T20:33:38.673Z",
   "provider": "Local Ollama / qwen3:1.7b",
   "retrieval": "Direct publisher RSS feeds",
   "topics": {
     "geopolitics": {
       "kicker": "Geopolitics",
-      "summary": "Today's lens covers regional conflicts, humanitarian crises, sports events, and global security concerns, highlighting the complex interplay of politics, climate, and international relations.",
+      "summary": "Today's lens covers a mix of geopolitical tensions, technological developments, and social movements, highlighting key events and their potential impacts on global dynamics.",
       "stories": [
         {
-          "title": "Ethiopia's New Rebel Alliance Faces an Old Problem",
-          "body": "Ethiopia's new rebel alliance, formed to counter the Ethiopian government, faces challenges rooted in historical tensions and political instability. The alliance's efforts to gain support are complicated by longstanding ethnic and regional divisions, which have persisted despite recent efforts to promote unity. The group's ability to secure funding and military support remains uncertain, as it struggles to balance its mandate with the broader political landscape of the country.",
-          "whyItMatters": "The alliance's success could influence regional stability and the balance of power in the Horn of Africa.",
+          "title": "Russia targets data centers, Zelensky warns of 'ordinary life' disruption",
+          "body": "Russia has launched attacks on data centers, targeting critical infrastructure and services. President Zelensky has expressed concern over the impact on everyday life, emphasizing the potential for widespread disruption and economic consequences. The attacks are part of a broader strategy to undermine digital infrastructure and national security.",
+          "whyItMatters": "The targeting of critical infrastructure highlights the growing importance of cyber warfare and the vulnerability of digital systems in modern geopolitics.",
           "sources": [
             {
-              "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/opinions/2026/9/25/ethiopias-new-rebel-alliance-faces-an-old-problem?traffic_source=rss"
+              "name": "BBC World",
+              "url": "https://www.bbc.co.uk/news/articles/c84gkwgk7d06o?at_medium=RSS&at_campaign=rss"
             },
             {
-              "name": "The Guardian World",
-              "url": "https://www.theguardian.com/world/2026/sep/24/fears-return-to-war-tigray-rebels-launch-offensive-against-ethiopian-army"
+              "name": "Al Jazeera",
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/25/jerusalem-daily-what-was-netanyahus-unga-speech-really-about?traffic_source=rss"
             }
           ]
         },
         {
-          "title": "Sudanese Refugees Flee to Chad Amid UN Calls for Funding",
-          "body": "More than 55,000 Sudanese refugees have fled to Chad, seeking safety amid ongoing conflict and humanitarian crises. The UN has called for increased funding to support the refugee crisis, highlighting the urgent need for international cooperation to address the growing number of displaced persons. The situation underscores the vulnerability of refugees and the challenges of maintaining humanitarian aid in conflict zones.",
-          "whyItMatters": "The refugee crisis highlights the importance of international solidarity and the need for sustained humanitarian efforts in conflict-affected regions.",
+          "title": "Netanyahu's UNGA speech sparks debate over Israel's policies",
+          "body": "Al Jazeera reports on the controversy surrounding Netanyahu's UNGA speech, which was met with mixed reactions. Some countries walked out of the speech, questioning its content and implications. The debate centers on Israel's policies in the Middle East and their impact on regional stability.",
+          "whyItMatters": "The speech controversy reflects the complex dynamics of international relations and the challenges of addressing sensitive geopolitical issues in multilateral forums.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/25/more-than-55000-sudanese-refugees-flee-to-chad-as-un-calls-for-funding?traffic_source=rss"
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/25/which-countries-walked-out-of-netanyahus-unga-speech?traffic_source=rss"
             },
             {
-              "name": "The Guardian World",
-              "url": "https://www.theguardian.com/world/2026/sep/24/fears-return-to-war-tigray-rebels-launch-offensive-against-ethiopian-army"
+              "name": "Al Jazeera",
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/25/jerusalem-daily-what-was-netanyahus-unga-speech-really-about?traffic_source=rss"
             }
           ]
         },
         {
-          "title": "Turkiye vs France in UEFA Nations League",
-          "body": "Turkiye faces France in a crucial UEFA Nations League match, with the outcome potentially impacting the group stage standings. The game is expected to be a high-stakes encounter, with both teams aiming to secure a strong position in the competition. The match is a testament to the competitive nature of European football and the importance of domestic and international competitions in shaping national pride and sports diplomacy.",
-          "whyItMatters": "The match could influence the European football calendar and the competitive dynamics between the participating nations.",
+          "title": "Pakistan warns of 'red line' against Houthi threats to Saudi holy sites",
+          "body": "Pakistan's Prime Minister has called the Houthi group's threats to Saudi holy sites a 'red line,' emphasizing the need for immediate action to protect cultural and religious heritage. The conflict highlights tensions in the region and the potential for escalation in the Middle East.",
+          "whyItMatters": "The warning underscores the importance of addressing regional conflicts and the risks of escalation, particularly in areas with deep cultural and religious significance.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/sports/liveblog/2026/9/25/live-turkiye-vs-france-uefa-nations-league?traffic_source=rss"
-            },
-            {
-              "name": "The Guardian World",
-              "url": "https://www.theguardian.com/world/2026/sep/24/fears-return-to-war-tigray-rebels-launch-offensive-against-ethiopian-army"
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/25/pakistan-pm-calls-houthi-threats-to-saudi-holy-sites-a-red?traffic_source=rss"
             }
           ]
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-25T16:35:43.280Z"
+      "updatedAt": "2026-09-25T20:33:38.673Z"
     },
     "science": {
       "kicker": "ScienceDaily",
-      "summary": "Today's lens covers groundbreaking scientific discoveries, technological advancements, and environmental concerns impacting the global academic and scientific community.",
+      "summary": "Today's lens highlights groundbreaking scientific discoveries, technological advancements, and environmental observations that could impact students' understanding of the world.",
       "stories": [
         {
-          "title": "New Sea Spiders Discovered with 'Nightmare Fuel' Properties",
-          "body": "Scientists have identified two new species of sea spiders with unusual biological properties, including the ability to break down complex materials, which could have implications for biotechnology and environmental science.",
-          "whyItMatters": "These findings may lead to new applications in material science and environmental remediation.",
+          "title": "New Sea Spiders Discovered",
+          "body": "Scientists have identified two bizarre new sea spiders that exhibit unique biological traits, potentially making them a significant subject of study in marine biology. These creatures, which are referred to as 'nightmare fuel,' may have unexpected ecological roles and could challenge existing classifications in arachnology.",
+          "whyItMatters": "The discovery of these unusual organisms could lead to new insights into marine ecosystems and evolutionary biology.",
           "sources": [
             {
               "name": "ScienceDaily",
               "url": "https://www.sciencedaily.com/releases/2026/09/260925005412.htm"
-            },
-            {
-              "name": "ScienceDaily",
-              "url": "https://www.sciencedaily.com/releases/2026/09/260925005430.htm"
             }
           ]
         },
         {
-          "title": "Genetic Disorder Linked to Autism May Be More Prevalent Than Thought",
-          "body": "A rare genetic disorder associated with autism has been found to be more common than previously believed, raising questions about the broader genetic landscape and potential health implications for future generations.",
-          "whyItMatters": "Understanding the prevalence of this disorder could inform genetic research and public health strategies.",
+          "title": "Genetic Disorder May Be More Common Than Thought",
+          "body": "A rare autism-linked genetic disorder, previously thought to be uncommon, may be more prevalent than previously believed. Researchers are analyzing genetic data to better understand its impact and potential treatments, which could have implications for genetic research and healthcare.",
+          "whyItMatters": "Understanding the prevalence and causes of this disorder could lead to improved diagnostic and therapeutic approaches for individuals with autism.",
           "sources": [
             {
               "name": "ScienceDaily",
               "url": "https://www.sciencedaily.com/releases/2026/09/260924020405.htm"
-            },
-            {
-              "name": "The Guardian Science",
-              "url": "https://www.theguardian.com/science/2026/sep/25/dna-database-uk-dogs-vital-evidence-police-criminals"
             }
           ]
         },
         {
           "title": "CERN Begins Disconnecting Large Hadron Collider",
-          "body": "CERN has initiated the process of disconnecting the Large Hadron Collider, a major particle physics facility, to allow for maintenance and upgrades, which could impact future research in high-energy physics.",
-          "whyItMatters": "This action reflects ongoing efforts to maintain and improve scientific infrastructure, which is critical for advancing fundamental scientific knowledge.",
+          "body": "CERN has initiated the process of disconnecting the Large Hadron Collider, a major particle physics facility. This step is part of a broader effort to ensure the safety and maintenance of the collider, which is crucial for future scientific research and experiments.",
+          "whyItMatters": "The shutdown of the Large Hadron Collider could affect future particle physics research and the development of new scientific technologies.",
           "sources": [
             {
               "name": "ScienceDaily",
               "url": "https://www.sciencedaily.com/releases/2026/09/260925005430.htm"
-            },
-            {
-              "name": "ScienceDaily",
-              "url": "https://www.sciencedaily.com/releases/2026/09/260924020357.htm"
             }
           ]
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-25T16:35:43.280Z"
+      "updatedAt": "2026-09-25T20:33:38.673Z"
     },
     "economy": {
       "kicker": "Economic",
-      "summary": "Today's lens covers economic developments, including political tensions, refugee crises, and business news.",
+      "summary": "Today's lens covers a mix of economic developments, geopolitical tensions, and business news, highlighting key events and their potential impacts on global markets and policies.",
       "stories": [
         {
-          "title": "Ethiopia's new rebel alliance faces an old problem",
-          "body": "Ethiopia's new rebel alliance, which includes the Ethiopian Defense Forces and the Ethiopian People's Revolutionary Democratic Front, faces challenges due to historical tensions and political instability. The alliance aims to restore peace and governance but struggles with internal divisions and external pressures.",
-          "whyItMatters": "The alliance's success depends on overcoming historical grievances and securing international support.",
+          "title": "Al Jazeera reports on Israel's UNGA speech",
+          "body": "Al Jazeera reported that several countries, including Egypt, Jordan, and Saudi Arabia, withdrew from Netanyahu's UNGA speech, citing concerns over Israel's actions in the Middle East. The speech focused on regional security and the Israeli-Palestinian conflict, with some nations expressing dissatisfaction with Israel's military activities and policies.",
+          "whyItMatters": "The withdrawal of countries from Netanyahu's UNGA speech highlights ongoing geopolitical tensions and the impact of regional conflicts on international relations.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/opinions/2026/9/25/ethiopias-new-rebel-alliance-faces-an-old-problem?traffic_source=rss"
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/25/which-countries-walked-out-of-netanyahus-unga-speech?traffic_source=rss"
             },
             {
-              "name": "The Guardian Business",
-              "url": "https://www.theguardian.com/media/2026/sep/25/trump-media-ban-white-house-pool"
+              "name": "Al Jazeera",
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/25/jerusalem-daily-what-was-netanyahus-unga-speech-really-about?traffic_source=rss"
             }
           ]
         },
         {
-          "title": "More than 55,000 Sudanese refugees flee to Chad as UN calls for funding",
-          "body": "Over 55,000 Sudanese refugees have fled to Chad due to ongoing conflict and instability in Sudan. The UN has called for increased funding to support the refugees' livelihoods and ensure their safety, highlighting the humanitarian crisis in the region.",
-          "whyItMatters": "The refugee crisis underscores the need for international cooperation and funding to address displacement and humanitarian needs.",
+          "title": "Pakistan PM calls Houthi threats to Saudi holy sites a 'red line'",
+          "body": "Pakistan's Prime Minister Imran Khan warned that Houthi rebels in Yemen are threatening Saudi holy sites, calling it a 'red line' that could escalate into a full-scale conflict. The statement comes amid growing tensions between Saudi Arabia and the Houthi rebels, who have been targeting Saudi interests in Yemen.",
+          "whyItMatters": "The escalation of tensions between Saudi Arabia and the Houthi rebels could impact regional stability and fuel further conflict in the Middle East.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/25/more-than-55000-sudanese-refugees-flee-to-chad-as-un-calls-for-funding?traffic_source=rss"
-            },
-            {
-              "name": "The Guardian Business",
-              "url": "https://www.theguardian.com/media/2026/sep/25/trump-media-ban-white-house-pool"
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/25/pakistan-pm-calls-houthi-threats-to-saudi-holy-sites-a-red?traffic_source=rss"
             }
           ]
         },
         {
-          "title": "US backs Elon Musk's bid to overturn €120m EU fine against X",
-          "body": "The US has backed Elon Musk's bid to overturn a €120 million EU fine against X (formerly Twitter), citing concerns over the platform's impact on free speech and digital governance. The decision reflects ongoing debates about regulating social media and its role in public discourse.",
-          "whyItMatters": "The US's support for the bid highlights the tension between free speech and regulatory oversight in the digital age.",
+          "title": "US mortgage rates hit 7% for first time in 20 months",
+          "body": "US mortgage rates reached 7% for the first time in 20 months, reflecting rising borrowing costs and concerns about the housing market. The increase is attributed to a combination of factors, including a slowdown in economic growth and a tightening of lending standards.",
+          "whyItMatters": "The rise in mortgage rates could affect consumer spending and investment in real estate, potentially impacting the broader economy.",
           "sources": [
             {
-              "name": "BBC Business",
-              "url": "https://www.bbc.co.uk/news/articles/cq0m373ee0v0o?at_medium=RSS&at_campaign=rss"
-            },
-            {
               "name": "The Guardian Business",
-              "url": "https://www.theguardian.com/business/2026/sep/24/eu-trump-diesel-export-ban-fuel-prices-europe"
+              "url": "https://www.theguardian.com/business/2026/sep/24/mortgage-rates-housing-market"
             }
           ]
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-25T16:35:43.280Z"
+      "updatedAt": "2026-09-25T20:33:38.673Z"
     }
   }
 }
