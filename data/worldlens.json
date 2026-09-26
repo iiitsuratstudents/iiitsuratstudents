@@ -1,65 +1,69 @@
 {
-  "generatedAt": "2026-09-26T00:39:26.480Z",
+  "generatedAt": "2026-09-26T04:34:01.706Z",
   "provider": "Local Ollama / qwen3:1.7b",
   "retrieval": "Direct publisher RSS feeds",
   "topics": {
     "geopolitics": {
-      "kicker": "Global Brief",
-      "summary": "Today's lens covers geopolitical developments, AI concerns, and regional conflicts, with a focus on international relations, technology, and human rights issues.",
+      "kicker": "Geopolitics",
+      "summary": "Today's lens covers key developments in geopolitics, including elections, regional conflicts, and international relations.",
       "stories": [
         {
-          "title": "Iran offers US plan to reopen Hormuz Strait",
-          "body": "Iran has offered a seven-day plan to the United States to reopen the Strait of Hormuz, a critical waterway for global trade. The proposal comes as tensions persist over regional security and economic interests. The US has not yet responded, and Iran's offer is seen as a potential diplomatic gesture to ease tensions.",
-          "whyItMatters": "The potential reopening of the Strait of Hormuz could significantly impact global trade and regional stability, especially given the ongoing geopolitical tensions in the Middle East.",
+          "title": "Morocco's Political Landscape",
+          "body": "PAM secured a significant victory in the Moroccan parliament elections, but fell short of a majority. The party's success highlights the complex political dynamics in the region, where coalition-building and electoral strategy play crucial roles.",
+          "whyItMatters": "The outcome reflects the challenges of achieving political stability in a country with diverse political factions.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/liveblog/2026/9/26/iran-war-live-tehran-offers-us-plan-to-reopen-hormuz-within-seven-days?traffic_source=rss"
+              "url": "https://www.aljazeera.com/news/2026/9/26/pam-wins-big-in-morocco-parliament-elections-but-falls-short-of-majority?traffic_source=rss"
             },
+            {
+              "name": "Al Jazeera",
+              "url": "https://www.aljazeera.com/news/2026/9/26/yemeni-leader-urges-public-to-enlist-offers-amnesty-to-houthi-defectors?traffic_source=rss"
+            }
+          ]
+        },
+        {
+          "title": "Iran's Strategic Offer to the US",
+          "body": "Iran has offered the United States a deal to reopen the Strait of Hormuz in seven days, aiming to stabilize regional tensions and ensure maritime security. This move underscores the strategic importance of the Strait and the potential for diplomatic engagement.",
+          "whyItMatters": "The deal could influence future negotiations and regional stability in the Middle East.",
+          "sources": [
             {
               "name": "BBC World",
               "url": "https://www.bbc.co.uk/news/articles/cqgmrr9ekr7ko?at_medium=RSS&at_campaign=rss"
             },
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/25/iran-to-reopen-strait-of-hormuz-within-a-week-if-us-agrees-to-plan?traffic_source=rss"
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/26/yemens-government-offers-amnesty-to-houthi-defectors?traffic_source=rss"
             }
           ]
         },
         {
-          "title": "US court rules against Kalshi, states can regulate prediction markets",
-          "body": "A US court ruled against Kalshi, a company that provides prediction market services, stating that states can regulate these markets. This decision highlights the growing regulatory landscape around AI and financial markets, raising questions about the balance between innovation and oversight.",
-          "whyItMatters": "The ruling underscores the importance of regulating AI-driven financial systems to prevent potential risks and ensure ethical practices in market operations.",
+          "title": "Yemen's Political Tensions",
+          "body": "Yemen's government has offered amnesty to Houthi defectors, aiming to reduce violence and promote reconciliation. The move comes amid ongoing conflict and the challenge of building trust between warring factions.",
+          "whyItMatters": "Amnesty offers a potential pathway to de-escalation, but its effectiveness depends on broader political and military support.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/25/us-court-rules-against-kalshi-says-states-can-regulate-prediction-markets?traffic_source=rss"
-            }
-          ]
-        },
-        {
-          "title": "FBI hack exposes agents' fears and anger",
-          "body": "The FBI has revealed that agents were fearful and angry after a data breach involving 'dangerous' information. The incident highlights the risks associated with data security and the psychological impact of cyber threats on public servants.",
-          "whyItMatters": "The incident underscores the need for robust cybersecurity measures and the importance of protecting sensitive information to maintain public trust and operational safety.",
-          "sources": [
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/26/yemens-government-offers-amnesty-to-houthi-defectors?traffic_source=rss"
+            },
             {
-              "name": "BBC World",
-              "url": "https://www.bbc.co.uk/news/articles/cm4gjjlgzdjgo?at_medium=RSS&at_campaign=rss"
+              "name": "Al Jazeera",
+              "url": "https://www.aljazeera.com/news/2026/9/26/yemeni-leader-urges-public-to-enlist-offers-amnesty-to-houthi-defectors?traffic_source=rss"
             }
           ]
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-26T00:39:26.480Z"
+      "updatedAt": "2026-09-26T04:34:01.706Z"
     },
     "science": {
       "kicker": "Science & Nature",
-      "summary": "Today's lens covers a range of scientific discoveries, from climate change to genetic research, highlighting the latest advancements and their potential impacts.",
+      "summary": "Today's lens covers a mix of scientific discoveries, environmental concerns, and technological advancements.",
       "stories": [
         {
-          "title": "Tropical Island's 'Eternal Snow' Vanishes",
-          "body": "The treasured 'eternal snow' on a tropical island is set to disappear forever, as climate change accelerates melting in the region. This phenomenon is observed by the BBC Science team, highlighting the vulnerability of polar and alpine ecosystems to global warming.",
-          "whyItMatters": "The disappearance of this unique snowfall underscores the urgent need for climate action and the impact of rising temperatures on global biodiversity.",
+          "title": "Tropical Island's Eternal Snow Vanishes",
+          "body": "The 'eternal snow' on a tropical island is set to disappear forever, as climate change accelerates melting. This phenomenon highlights the vulnerability of ecosystems to global warming, with implications for local wildlife and climate patterns.",
+          "whyItMatters": "The disappearance of this unique snowfall underscores the urgent need for climate action and the impact of rising temperatures on global ecosystems.",
           "sources": [
             {
               "name": "BBC Science",
@@ -69,8 +73,8 @@
         },
         {
           "title": "New Sea Spiders Discovered",
-          "body": "Scientists have identified two bizarre new sea spiders that are considered 'nightmare fuel' due to their unique biological traits. These discoveries are reported by ScienceDaily, emphasizing the ongoing exploration of marine life and the potential for new species to be found in unexplored areas.",
-          "whyItMatters": "Such discoveries contribute to our understanding of marine ecosystems and may lead to new applications in biotechnology or medicine.",
+          "body": "Scientists have identified two bizarre new sea spiders, which are considered 'nightmare fuel' due to their potential to cause significant ecological disruption. These discoveries highlight the ongoing exploration of marine biodiversity and the importance of preserving oceanic ecosystems.",
+          "whyItMatters": "The discovery of new species can provide insights into evolutionary processes and ecological balance, emphasizing the need for continued research and conservation efforts.",
           "sources": [
             {
               "name": "ScienceDaily",
@@ -80,8 +84,8 @@
         },
         {
           "title": "Genetic Disorder May Be More Common Than Thought",
-          "body": "A rare autism-linked genetic disorder may be far more common than previously believed, according to recent research. This finding is reported by ScienceDaily, highlighting the importance of genetic studies in understanding developmental disorders and improving diagnostic tools.",
-          "whyItMatters": "Understanding the prevalence of such genetic conditions can aid in early detection and intervention, ultimately improving the quality of life for affected individuals.",
+          "body": "A rare autism-linked genetic disorder may be far more common than previously believed, raising questions about its prevalence and potential impact on public health. This finding underscores the importance of genetic research and the need for further investigation into hereditary conditions.",
+          "whyItMatters": "Understanding the prevalence of genetic disorders can inform medical research, policy, and public health strategies, contributing to better healthcare outcomes for affected individuals.",
           "sources": [
             {
               "name": "ScienceDaily",
@@ -91,52 +95,60 @@
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-26T00:39:26.480Z"
+      "updatedAt": "2026-09-26T04:34:01.706Z"
     },
     "economy": {
       "kicker": "Economic",
-      "summary": "Today's lens covers developments in global economics, including a potential easing of tensions in the Strait of Hormuz, regulatory actions in finance, and health concerns in Africa and the US.",
+      "summary": "Today's lens covers political developments, economic news, and international affairs, focusing on key events and their potential impacts on global students.",
       "stories": [
         {
-          "title": "Iran offers US plan to reopen Hormuz Strait",
-          "body": "Iran has offered a seven-day plan to the United States to reopen the Strait of Hormuz, a critical waterway for global trade. The plan includes measures to ensure maritime safety and stability. Iran's proposal comes as the US considers its response, with both sides aiming to resolve tensions through dialogue.",
-          "whyItMatters": "The potential reopening of the Strait of Hormuz could significantly impact global trade and energy supplies, affecting economies worldwide.",
+          "title": "Morocco's Parliament Election: PAM Wins but Falls Short of Majority",
+          "body": "Al Jazeera reports that Moroccan political party PAM secured significant electoral success in the parliamentary elections, gaining a large number of seats. However, it did not achieve a majority, indicating the need for further political maneuvering to form a stable government. This development highlights the complexity of political alliances and the challenges of forming a cohesive government in a multi-party system.",
+          "whyItMatters": "The election results reflect the evolving political landscape in Morocco and the importance of forming stable alliances in a competitive political environment.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/liveblog/2026/9/26/iran-war-live-tehran-offers-us-plan-to-reopen-hormuz-within-seven-days?traffic_source=rss"
+              "url": "https://www.aljazeera.com/news/2026/9/26/pam-wins-big-in-morocco-parliament-elections-but-falls-short-of-majority?traffic_source=rss"
             },
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/25/iran-to-reopen-strait-of-hormuz-within-a-week-if-us-agrees-to-plan?traffic_source=rss"
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/26/the-bombs-are-still-falling-does-diplomacy-even-work?traffic_source=rss"
             }
           ]
         },
         {
-          "title": "US court rules against Kalshi, states can regulate prediction markets",
-          "body": "A US court ruled against Kalshi, a company that operates prediction markets, stating that states have the authority to regulate such markets. This decision highlights the evolving legal landscape around financial prediction markets and their potential impact on investment and risk management.",
-          "whyItMatters": "The ruling could influence how financial prediction markets are regulated, affecting investors and market participants globally.",
+          "title": "Yemen's Government Offers Amnesty to Houthi Defectors",
+          "body": "Al Jazeera reports that Yemen's government has offered amnesty to Houthi defectors, aiming to reduce violence and promote peace. This move is seen as a potential step toward reconciliation, though the long-term impact remains uncertain due to ongoing conflicts and political divisions.",
+          "whyItMatters": "The offer of amnesty could influence future peace negotiations and the stability of Yemen's political landscape.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/25/us-court-rules-against-kalshi-says-states-can-regulate-prediction-markets?traffic_source=rss"
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/26/yemens-government-offers-amnesty-to-houthi-defectors?traffic_source=rss"
+            },
+            {
+              "name": "Al Jazeera",
+              "url": "https://www.aljazeera.com/news/2026/9/26/yemeni-leader-urges-public-to-enlist-offers-amnesty-to-houthi-defectors?traffic_source=rss"
             }
           ]
         },
         {
-          "title": "DR Congo's Ebola outbreak spreads to new health zones",
-          "body": "The World Health Organization (WHO) reported that the Ebola outbreak in DR Congo has spread to two new health zones, increasing the risk of further transmission. Public health measures are being implemented to control the spread of the virus and protect vulnerable populations.",
-          "whyItMatters": "The expansion of the Ebola outbreak could lead to increased health risks and resource allocation, highlighting the importance of global health security and preparedness.",
+          "title": "EU Warns Trump on Diesel Export Ban, US Backs Elon Musk's Bid to Overturn EU Fine",
+          "body": "The EU warns that Trump's plan to ban US diesel exports would negatively impact both sides, while the US backs Elon Musk's bid to overturn an EU fine against X. This highlights the complex interplay between trade policies, political decisions, and international relations.",
+          "whyItMatters": "The EU-US trade conflict and the potential overturning of the EU fine reflect the ongoing tensions in global trade and political relations.",
           "sources": [
             {
-              "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/25/dr-congos-ebola-outbreak-spreads-to-two-new-health-zones-who-says?traffic_source=rss"
+              "name": "The Guardian Business",
+              "url": "https://www.theguardian.com/business/2026/sep/24/eu-trump-diesel-export-ban-fuel-prices-europe"
+            },
+            {
+              "name": "BBC Business",
+              "url": "https://www.bbc.co.uk/news/articles/cq0m373ee0v0o?at_medium=RSS&at_campaign=rss"
             }
           ]
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-26T00:39:26.480Z"
+      "updatedAt": "2026-09-26T04:34:01.706Z"
     }
   }
 }
