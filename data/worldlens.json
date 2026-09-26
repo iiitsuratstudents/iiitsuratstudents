@@ -1,65 +1,61 @@
 {
-  "generatedAt": "2026-09-26T08:33:53.691Z",
+  "generatedAt": "2026-09-26T12:37:24.908Z",
   "provider": "Local Ollama / qwen3:1.7b",
   "retrieval": "Direct publisher RSS feeds",
   "topics": {
     "geopolitics": {
       "kicker": "Global Brief",
-      "summary": "Today's lens covers a mix of political, humanitarian, and technological developments, including bans on sports betting, flood disasters, AI responsibility, and geopolitical tensions.",
+      "summary": "Today's lens covers geopolitical developments, natural disasters, and political shifts, highlighting the complexity of global events and their potential impacts on students.",
       "stories": [
         {
-          "title": "Brazilian election ban on fixed-odds sports betting",
-          "body": "Brazilian President Lula has banned fixed-odds sports betting a week before the country's elections, citing concerns over gambling addiction and public safety. The move comes amid rising tensions between political parties and the public's growing reliance on online betting platforms.",
-          "whyItMatters": "The ban highlights the intersection of politics and public behavior, raising questions about the role of government in regulating gambling and its impact on electoral participation.",
+          "title": "Ireland stalls preparations for Israel game, pressure grows",
+          "body": "Ireland has faced increasing pressure to boycott a planned football match against Israel, as preparations for the game stall. The decision has sparked debates about geopolitical tensions and the role of sports in international relations. The situation reflects broader concerns over regional stability and the impact of political decisions on global events.",
+          "whyItMatters": "The decision to boycott the game highlights the interplay between political tensions and international sports, offering insights into how global events can influence regional dynamics.",
           "sources": [
             {
-              "name": "The Guardian World",
-              "url": "https://www.theguardian.com/world/2026/sep/26/lula-bans-fixed-odds-sports-betting-a-week-before-brazilian-elections"
+              "name": "Al Jazeera",
+              "url": "https://www.aljazeera.com/sports/2026/9/26/pressure-to-boycott-israel-game-grows-as-ireland-preparations-stall?traffic_source=rss"
             },
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/26/could-ai-firms-be-held-responsible-for-mass-shootings?traffic_source=rss"
+              "url": "https://www.aljazeera.com/news/2026/9/26/pezeshkian-says-iran-no-longer-trusts-talks-with-washington?traffic_source=rss"
             }
           ]
         },
         {
-          "title": "Bangkok flood disaster and infrastructure damage",
-          "body": "Heavy rainfall in Bangkok has led to a disaster zone declaration, with roads submerged and thousands of people displaced. The flooding has also caused significant damage to infrastructure, including roads and buildings, and has raised concerns about climate change and urban planning.",
-          "whyItMatters": "The flood disaster underscores the growing risks of climate-related events and the need for better disaster preparedness and infrastructure resilience in vulnerable regions.",
+          "title": "Ebola spreads in DR Congo, risking neighboring nations",
+          "body": "Ebola virus has spread to DR Congo, raising concerns about public health and potential outbreaks in neighboring countries. The situation underscores the importance of global health cooperation and the risks associated with cross-border disease transmission.",
+          "whyItMatters": "The spread of Ebola in DR Congo highlights the interconnectedness of global health systems and the need for coordinated international responses to prevent further spread.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/26/disaster-zone-declared-across-bangkok-as-heavy-rain-triggers-flooding?traffic_source=rss"
-            },
-            {
-              "name": "BBC World",
-              "url": "https://www.bbc.co.uk/news/articles/ck1wxx8n2x3zo?at_medium=RSS&at_campaign=rss"
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/26/26-09-sv-ebola-spreading-borders-drc-dr?traffic_source=rss"
             }
           ]
         },
         {
-          "title": "AI responsibility for mass shootings",
-          "body": "A question has emerged about whether AI firms could be held responsible for mass shootings, given the role of AI in content moderation and decision-making processes. The debate centers on the ethical and legal responsibilities of companies developing AI systems that may be used in harmful ways.",
-          "whyItMatters": "This issue highlights the growing ethical and legal challenges posed by AI technologies and the need for clear guidelines on their use and accountability.",
+          "title": "Iran rejects US talks, signals shift in foreign policy",
+          "body": "Iranian President Mohammad Pezeshkian has stated that Iran no longer trusts US-led talks, signaling a shift in Iran's foreign policy. This development reflects broader tensions between Iran and the United States and the complexities of international diplomacy.",
+          "whyItMatters": "Iran's rejection of US talks underscores the challenges of maintaining diplomatic relations in a highly politicized global environment, offering insights into the dynamics of international diplomacy.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/26/could-ai-firms-be-held-responsible-for-mass-shootings?traffic_source=rss"
+              "url": "https://www.aljazeera.com/news/2026/9/26/pezeshkian-says-iran-no-longer-trusts-talks-with-washington?traffic_source=rss"
             }
           ]
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-26T08:33:53.691Z"
+      "updatedAt": "2026-09-26T12:37:24.908Z"
     },
     "science": {
-      "kicker": "Science & Nature",
-      "summary": "Today's lens covers recent scientific discoveries, environmental concerns, and advancements in medical research.",
+      "kicker": "Science & Technology",
+      "summary": "Today's lens covers environmental disasters, scientific discoveries, and advancements in medical research.",
       "stories": [
         {
-          "title": "Bangkok Floods: Climate Change and Disaster Response",
-          "body": "Bangkok roads were submerged as a flood disaster was declared, highlighting the increasing impact of climate change on urban areas. The event underscores the need for improved disaster preparedness and infrastructure resilience in vulnerable regions.",
-          "whyItMatters": "Understanding climate-related disasters is crucial for developing adaptive strategies to protect communities and infrastructure.",
+          "title": "Bangkok Roads Submerged as Flood Disaster Declared",
+          "body": "Bangkok's roads were submerged due to a severe flood, with the disaster declared by local authorities. The flood has affected thousands of residents, highlighting the increasing risks of climate-related disasters in urban areas.",
+          "whyItMatters": "This event underscores the vulnerability of cities to extreme weather events and the need for improved disaster preparedness and infrastructure.",
           "sources": [
             {
               "name": "BBC Science",
@@ -72,9 +68,9 @@
           ]
         },
         {
-          "title": "New Sea Spiders Discovered: Biodiversity and Evolution",
-          "body": "Scientists identified two bizarre new sea spiders that may have evolved unique survival mechanisms. These discoveries contribute to our understanding of marine biodiversity and evolutionary processes in extreme environments.",
-          "whyItMatters": "New species discoveries enhance our knowledge of ecosystems and can inform conservation efforts and biological research.",
+          "title": "Scientists Discover Bizarre New Sea Spiders",
+          "body": "Scientists have identified two new species of sea spiders, which are considered 'nightmare fuel' due to their unique biological characteristics. These discoveries contribute to our understanding of marine biodiversity and evolutionary processes.",
+          "whyItMatters": "Such findings highlight the importance of ongoing biological research and the potential for new species to be discovered in unexplored ecosystems.",
           "sources": [
             {
               "name": "ScienceDaily",
@@ -87,76 +83,64 @@
           ]
         },
         {
-          "title": "Brain Tumour Test Advances: Faster Diagnosis for Patients",
-          "body": "A groundbreaking brain tumour test has reduced diagnosis time from eight weeks to just two hours, offering faster and more accurate medical treatment for patients. This innovation highlights the potential of medical technology to improve patient outcomes.",
-          "whyItMatters": "Advancements in medical diagnostics can significantly impact patient care and treatment efficiency.",
+          "title": "DNA Database of UK Dogs Could Help Police Identify Criminals",
+          "body": "A new DNA database of UK dogs has been created, which could aid in identifying criminals by linking them to specific dogs. This technological advancement demonstrates how scientific research can have real-world applications in law enforcement.",
+          "whyItMatters": "This development illustrates the potential of scientific research to improve public safety and criminal identification strategies.",
           "sources": [
             {
               "name": "The Guardian Science",
-              "url": "https://www.theguardian.com/society/2026/sep/25/gamechanging-brain-tumour-test-reduces-diagnosis-eight-weeks-two-hours"
+              "url": "https://www.theguardian.com/science/2026/sep/25/dna-database-uk-dogs-vital-evidence-police-criminals"
             },
             {
-              "name": "The Guardian Science",
-              "url": "https://www.theguardian.com/science/2026/sep/25/dna-database-uk-dogs-vital-evidence-police-criminals"
+              "name": "Nature",
+              "url": "https://www.nature.com/articles/d41586-026-02980-w"
             }
           ]
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-26T08:33:53.691Z"
+      "updatedAt": "2026-09-26T12:37:24.908Z"
     },
     "economy": {
       "kicker": "Economic",
-      "summary": "Today's lens covers a mix of economic developments, natural disasters, and political commentary, highlighting the interplay between financial markets, climate impacts, and geopolitical tensions.",
+      "summary": "Today's lens covers economic developments, including political tensions, health crises, and business news.",
       "stories": [
         {
-          "title": "Bangkok Flooding",
-          "body": "Heavy rainfall in Bangkok has led to the declaration of a disaster zone, with residents facing urgent evacuation and potential infrastructure damage. The situation underscores the growing impact of climate change on urban areas.",
-          "whyItMatters": "The flooding highlights the vulnerability of low-lying regions to extreme weather events, emphasizing the need for improved disaster preparedness and climate resilience.",
+          "title": "Israel bans Arab parties from election: Who they are, why it matters",
+          "body": "Israel has banned Arab political parties from its election, citing concerns over the influence of foreign interests. The ban affects several parties, including the Democratic Unionist Party and the Arab Nationalist Party, which are led by Arab citizens. This decision has sparked debates about political representation and the role of foreign influence in Israeli politics.",
+          "whyItMatters": "The ban highlights tensions between political parties and foreign interests, impacting electoral processes and political dynamics in Israel.",
           "sources": [
             {
               "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/news/2026/9/26/disaster-zone-declared-across-bangkok-as-heavy-rain-triggers-flooding?traffic_source=rss"
-            },
-            {
-              "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/features/2026/9/26/nowhere-else-to-go-gaza-families-shelter-in-buildings-that-may-collapse?traffic_source=rss"
+              "url": "https://www.aljazeera.com/news/2026/9/26/israel-bans-arab-parties-from-election-who-they-are-why-it-matters?traffic_source=rss"
             }
           ]
         },
         {
-          "title": "US Mortgage Rates Rise",
-          "body": "US mortgage rates have reached a new high, reflecting the ongoing challenges of the housing market. The rise in rates could impact both buyers and lenders, influencing economic decisions and financial planning.",
-          "whyItMatters": "Economic uncertainty and rising interest rates can affect consumer behavior and investment strategies, highlighting the importance of monitoring financial trends for informed decision-making.",
+          "title": "Ebola spreads in DR Congo, putting neighbouring nations at risk",
+          "body": "Ebola virus has spread to DR Congo, raising concerns about public health and potential outbreaks in neighboring countries. The outbreak has led to increased health monitoring and international cooperation to prevent further spread of the virus.",
+          "whyItMatters": "The spread of Ebola in DR Congo underscores the importance of global health security and the need for coordinated international responses to prevent further outbreaks.",
+          "sources": [
+            {
+              "name": "Al Jazeera",
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/26/26-09-sv-ebola-spreading-borders-drc-dr?traffic_source=rss"
+            }
+          ]
+        },
+        {
+          "title": "US mortgage rates top 7% for first time in 20 months",
+          "body": "US mortgage rates have reached a record high of 7%, reflecting the current state of the housing market. This increase has raised concerns about the affordability of homes and the potential impact on consumer spending and economic growth.",
+          "whyItMatters": "The rise in mortgage rates highlights the challenges facing the housing market and the broader economic landscape, affecting both individuals and businesses.",
           "sources": [
             {
               "name": "The Guardian Business",
               "url": "https://www.theguardian.com/business/2026/sep/24/mortgage-rates-housing-market"
-            },
-            {
-              "name": "The Guardian Business",
-              "url": "https://www.theguardian.com/business/2026/sep/24/eu-trump-diesel-export-ban-fuel-prices-europe"
-            }
-          ]
-        },
-        {
-          "title": "EU and US on Diesel Export Ban",
-          "body": "The EU has expressed concerns about Trump's plan to ban US diesel exports, citing potential negative impacts on both sides. This development reflects ongoing tensions between the US and EU in the energy sector.",
-          "whyItMatters": "The debate over diesel exports highlights the complex interplay between trade policies, environmental concerns, and economic interests, underscoring the need for balanced and informed policy decisions.",
-          "sources": [
-            {
-              "name": "The Guardian Business",
-              "url": "https://www.theguardian.com/business/2026/sep/24/eu-trump-diesel-export-ban-fuel-prices-europe"
-            },
-            {
-              "name": "BBC Business",
-              "url": "https://www.bbc.co.uk/news/articles/cq0m373ee0v0o?at_medium=RSS&at_campaign=rss"
             }
           ]
         }
       ],
       "mode": "GitHub Action · local Qwen",
-      "updatedAt": "2026-09-26T08:33:53.691Z"
+      "updatedAt": "2026-09-26T12:37:24.908Z"
     }
   }
 }
